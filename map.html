@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="assembly-map" id="assam"></div>
+        <div class="assembly-map" id="tn"></div>
+        <div class="assembly-map" id="wb"></div>
+        <div class="assembly-map" id="kerala"></div>
+        <div class="assembly-map" id="puducherry"></div>
+    </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+      <script src='https://thefederal.com/embed/common-js/underscore-min.js' ></script>
+      <script src='https://thefederal.com/embed/common-js/d3.v4.min.js' ></script>
+      <script src='https://d3js.org/topojson.v2.min.js'></script>
+      <script src='js/d3-cooltip.0.1.0.min.js'></script>
+      <script src="js/map.js"></script>
+      <script>
+          let assamSettings = {
+            statecode: 'S03',
+            mapsource: 'maps/assam.json',
+            scale: 3800,
+            center: [92.9, 26.2]
+          }
+          let tnSettings = {
+            statecode: 'S22',
+            mapsource: 'maps/tamilnadu.json',
+            scale: 3400,
+            center: [78.6, 10.8]
+          }
+          let wbSettings = {
+            statecode: 'S25',
+            mapsource: 'maps/west-bengal.json',
+            scale: 3000,
+            center: [87.8, 24.4]
+          }
+          let krSettings = {
+            statecode: 'S11',
+            mapsource: 'maps/kerala.json',
+            scale: 4200,
+            center: [76.2, 10.55]
+          }
+          let puducherrySettings = {
+            statecode: 'U07',
+            mapsource: 'maps/puducherry.json',
+            scale: 1000,
+            center: [79.8, 11.9]
+          }
+
+          drawAssemblyMap("#assam", assamSettings)
+          drawAssemblyMap("#tn", tnSettings)
+          drawAssemblyMap("#wb", wbSettings)
+          drawAssemblyMap("#kerala", krSettings)
+          drawAssemblyMap("#puducherry", puducherrySettings)
+      </script>
+</body>
+</html>

@@ -245,6 +245,42 @@
             }
             $("#owl-demo").html(content);
         }
+
+        $("#owl-demo2").owlCarousel({
+            itemsDesktop : [1199,4],
+            itemsDesktopSmall : [980,3],
+            itemsTablet: [768,2],
+            itemsTabletSmall: false,
+            itemsMobile : [479,1],
+            pagination: true,
+            navigation : true,
+            navigationText : ["prev","next"],
+            jsonPath : 'data.json',
+            jsonSuccess : customDataSuccess1
+        });
+        function customDataSuccess1(data) {
+                var cand = "";
+                for(var j in data["keycandidate"]){
+                    
+                    // var img = data["keycandidate"][j].["img/profile.png"];
+                    var keycandidatename = data["keycandidate"][j].candidatename;
+                    var keycandidateplace = data["keycandidate"][j].constname;
+                    var keycandidateparty = data["keycandidate"][j].party;
+                    var keycandidateleading = data["keycandidate"][j].leadortrail;
+                    var keycandidatevotes = data["keycandidate"][j].votes
+                    
+                    html = '<div class="candidate-items">'
+                    html += '<img src="img/profile.png" alt="">'
+                    html += '<div class="cand-info">'
+                    html += '<h4>'+ keycandidatename +'<span>'+ keycandidateparty +'</span></h4>'
+                    html += '<p class="cand-cont">'+ keycandidateplace +'</p>'
+                    html += '<p class="cand-votes"><span>'+keycandidateleading +'</span> '+keycandidatevotes +'</p>'
+                    html += '</div>'
+                    html += '</div>'
+                    cand += html
+                }
+                $("#owl-demo2").html(cand);
+            }
         
 });
     </script>

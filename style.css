@@ -11,9 +11,9 @@ svg {
   width: 100%;
   max-width: 1200px;
   height: 1000px;
-  background-image: url(img/trace.jpeg);
+  /* background-image: url(img/trace.jpeg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center; */
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
 }
@@ -44,4 +44,245 @@ svg {
 .tf_wrap button.dashfilters.active {
   background-color: #000;
   color: #fff;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* Carousel Section */
+
+#owl-demo .owl-item {
+  padding: 0px 0px;
+  display: block;
+  margin: 5px;
+  color: #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+  display: inline;
+  position: absolute;
+  top: 50%;
+  font-size: 25px;
+  transform: translateY(-50%);
+}
+.owl-prev {
+  left: 0;
+}
+.owl-next {
+  right: 0;
+}
+
+.contituency-items {
+  width: 100%;
+  height: 140px;
+  background-color: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  box-sizing: border-box;
+  text-align: left;
+  overflow: hidden;
+  /* margin-top: 100px; */
+}
+.contituency-items h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  background-color: #e8e8e8;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 0 0 15px;
+  margin: 0 0 0px 0;
+}
+.contituency-items h3 span {
+  font-weight: 600;
+}
+.contituency-items .leadingcand,
+.contituency-items .trailingcand {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: baseline;
+  /* margin-bottom: 10px; */
+  margin-top: -18px;
+}
+.contituency-items .leadingcand p,
+.contituency-items .trailingcand p {
+  text-align: right;
+  font-family: "Rubik", sans-serif;
+  color: #999;
+  font-size: 15px;
+}
+
+.contituency-items .leadingcand h4,
+.contituency-items .trailingcand h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  line-height: 14px;
+}
+
+.leadingindicator,
+.trailingindicator {
+  font-family: "Rubik", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  position: relative;
+  padding: 0 26px;
+  text-transform: uppercase;
+}
+.leadingindicator::before,
+.trailingindicator::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  top: 3px;
+  left: 16px;
+  border-radius: 50%;
+}
+
+.leadingindicator {
+  color: #008000;
+}
+.trailingindicator {
+  color: red;
+}
+.leadingindicator::before {
+  background-color: #008000;
+}
+.trailingindicator::before {
+  background-color: red;
+}
+/* .contituency-items h4::before{
+  position: absolute;
+  top: -14px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.contituency-items .leadingcand h4::before{
+  content: 'Leading';
+  color: #008000;
+}
+.contituency-items .trailingcand h4::before{
+  content: 'Trailing';
+  color: red;
+} */
+.contituency-items .leadingcand span,
+.contituency-items .trailingcand span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #999;
+}
+
+.carousel-item {
+  margin-left: 10px;
+}
+.carousel-item:first-child {
+  margin-left: 0;
+}
+
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+  padding: 0 33px;
+}
+
+.candidate-items {
+  width: 98%;
+  height: 100px;
+  background-color: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+  width: 97%;
+  height: 110px;
+}
+.candidate-items img {
+  max-width: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+}
+.candidate-items .cand-info {
+  width: 75%;
+  margin: 0 0 0 30%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.candidate-items h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  line-height: 14px;
+}
+
+.candidate-items h4 span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #999;
+}
+.candidate-items .cand-votes {
+  font-family: "Rubik", sans-serif;
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #008000;
+  margin: 5px 0;
+  position: relative;
+  padding: 0 8px;
+}
+.candidate-items .cand-votes span {
+  display: inline-block;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.candidate-items .cand-votes::before {
+  content: "";
+  background-color: #008000;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 3px;
+  border-radius: 50%;
+  left: 0;
+}
+.candidate-items .cand-cont {
+  font-family: "Rubik", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

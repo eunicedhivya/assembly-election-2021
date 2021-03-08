@@ -298,12 +298,12 @@
                 html += '<span class="leadingindicator">Leading</span>'
                 html += '<div class="leadingcand">'
                 html += '<h4>'+leadingname+'<span>'+leadingparty+'</span></h4>'
-                html += '<p>'+leadingmargin+'</p>'
+                html += '<p>'+leadingmargin.toLocaleString('en-IN')+'</p>'
                 html += '</div>'
                 html += '<span class="trailingindicator">Leading</span>'        
                 html += '<div class="trailingcand">'
                 html += '<h4>'+trailingname+' <span>'+trailingparty+'</span></h4>'
-                html += '<p>'+trailingmargin+'</p>'
+                html += '<p>'+trailingmargin.toLocaleString('en-IN')+'</p>'
                 html += '</div>'
                 html += '</div>'
 
@@ -343,7 +343,7 @@
                     html += '<div class="cand-info">'
                     html += '<h4>'+ keycandidatename +'<span>'+ keycandidateparty +'</span></h4>'
                     html += '<p class="cand-cont">'+ keycandidateplace +'</p>'
-                    html += '<p class="cand-votes"><span>'+keycandidateleading +'</span> '+keycandidatevotes +'</p>'
+                    html += '<p class="cand-votes"><span>'+keycandidateleading +'</span> '+keycandidatevotes.toLocaleString('en-IN') +'</p>'
                     html += '</div>'
                     html += '</div>'
                     cand += html

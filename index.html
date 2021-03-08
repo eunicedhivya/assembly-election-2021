@@ -7,6 +7,7 @@
     <title>Carousel</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
 <link rel="stylesheet" href="style.css">
     <style>
          #owl-demo .owl-item {
@@ -63,6 +64,7 @@
             grid-template-columns: 75% 25%;
             align-items: baseline;
             margin-bottom: 10px;
+            margin-top: -15px;
         }
         .contituency-items .leadingcand p, .contituency-items .trailingcand p{
             text-align: right;
@@ -77,8 +79,40 @@
             font-weight: 400;
             margin: 0;
             position: relative;
+            line-height: 14px;
         }
-        .contituency-items h4::before{
+
+        .leadingindicator, .trailingindicator{
+            font-family: 'Rubik', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            position: relative;
+            padding: 0 26px;
+            text-transform: uppercase;
+        }
+        .leadingindicator::before, .trailingindicator::before{
+            content: '';
+            position: absolute;
+            height: 6px;
+            width: 6px;
+            top: 3px;
+            left: 16px;
+            border-radius: 50%;
+        }
+
+        .leadingindicator{
+            color: #008000;
+        }
+        .trailingindicator{
+            color: red;
+        }
+        .leadingindicator::before{
+            background-color: #008000;
+        }
+        .trailingindicator::before{
+            background-color: red;
+        }
+        /* .contituency-items h4::before{
             position: absolute;
             top: -14px;
             font-size: 11px;
@@ -92,7 +126,7 @@
         .contituency-items .trailingcand h4::before{
             content: 'Trailing';
             color: red;
-        }
+        } */
         .contituency-items .leadingcand span, .contituency-items .trailingcand span{
             display: block;
             font-size: 11px;
@@ -100,8 +134,21 @@
             color: #999;
         }
 
+        .carousel-item {
+  margin-left: 10px;
+}
+.carousel-item:first-child {
+  margin-left: 0;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
         .candidate-items{
-            width: 100%;
+            width: 98%;
             height: 100px;
             background-color: #f8f8f8;
             border-radius: 14px;
@@ -110,9 +157,9 @@
             -moz-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
             box-sizing: border-box;
             text-align: left;
-            /* display: grid;
-            grid-template-columns: 30% 70%; */
             position: relative;
+            width: 97%;
+            height: 110px;
         }
         .candidate-items img {
             max-width: 80px;
@@ -133,6 +180,7 @@
             font-weight: 400;
             margin: 0;
             position: relative;
+            line-height: 14px;
         }
 
         .candidate-items h4 span{
@@ -172,21 +220,39 @@
             font-weight: 600;
             margin:5px 0;
         }
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            }
+
+            .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            }
+
+            .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
+    
 </head>
 <body>
-    <!-- <div class="contituency-items">
+    <div class="contituency-items">
         <h3> Tamil Nadu | <span>Kallakurichi</span> </h3>
+        <span class="leadingindicator">Leading</span>
         <div class="leadingcand">
             <h4>Karuppusamy Selvam Karuppusamy Selvam Selvam<span>AIADMK</span></h4>
             <p>3456567</p>
         </div>
+        <span class="trailingindicator">Leading</span>
         <div class="trailingcand">
             <h4>Mohanraj <span>DMK</span></h4>
             <p>3456567</p>
         </div>
-    </div> -->
+    </div>
     <div class="candidate-items">
         <img src="img/profile.png" alt="">
         <div class="cand-info">
@@ -210,7 +276,7 @@
             itemsMobile : [479,1],
             pagination: true,
             navigation : true,
-            navigationText : ["prev","next"],
+            navigationText : ['<i class="arrow left"></i>','<i class="arrow right"></i>'],
             jsonPath : 'data.json',
             jsonSuccess : customDataSuccess
         });
@@ -229,10 +295,12 @@
 
                 html = '<div class="contituency-items">'
                 html += '<h3> Tamil Nadu | <span>'+constituencyname+'</span> </h3>'
+                html += '<span class="leadingindicator">Leading</span>'
                 html += '<div class="leadingcand">'
                 html += '<h4>'+leadingname+'<span>'+leadingparty+'</span></h4>'
                 html += '<p>'+leadingmargin+'</p>'
-                html += '</div>'        
+                html += '</div>'
+                html += '<span class="trailingindicator">Leading</span>'        
                 html += '<div class="trailingcand">'
                 html += '<h4>'+trailingname+' <span>'+trailingparty+'</span></h4>'
                 html += '<p>'+trailingmargin+'</p>'
@@ -254,10 +322,11 @@
             itemsMobile : [479,1],
             pagination: true,
             navigation : true,
-            navigationText : ["prev","next"],
+            navigationText : ['<i class="arrow left"></i>','<i class="arrow right"></i>'],
             jsonPath : 'data.json',
             jsonSuccess : customDataSuccess1
         });
+
         function customDataSuccess1(data) {
                 var cand = "";
                 for(var j in data["keycandidate"]){

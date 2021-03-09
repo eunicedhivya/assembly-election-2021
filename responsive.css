@@ -1,0 +1,27 @@
+@media screen and (max-width: 767px) { 
+    .tf_wrap .dash-header h2 { 
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    .tf_wrap button.dashfilters { 
+      font-size: 8px;
+      margin: 0 0;
+      padding: 1px 5px;
+      line-height: 13px;
+    }
+    .contituency-items {
+      width: 80%;
+    }
+    .contituency-items .leadingcand, .contituency-items .trailingcand {
+      grid-template-columns: 60% 20%;
+    }
+    .split-2 {
+      grid-template-columns: none;
+    }
+    .candidate-items {
+      width: 85%;
+    }
+    .legend {
+      font-size: 10px;
+    }
+  }

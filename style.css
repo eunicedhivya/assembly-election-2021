@@ -16,6 +16,7 @@
   background-position: top center; */
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
+
 }
 .tf_wrap .dash-header {
   padding: 10px 5px;
@@ -299,10 +300,110 @@
   -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
   -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
   box-sizing: border-box;
+
+  margin: 20px 0;
 }
 
 .partywisedata-charts {
   display: grid;
   grid-template-columns: 50% 50%;
   column-gap: 20px;
+}
+
+
+/* SeatShare section */
+.seatshare, .partywise-voteshare { 
+  padding: 5px 10px;
+}
+.seatshare h4, .partywise-voteshare h4 { 
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.seatshare figure, .partywise-voteshare figure {
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+}
+
+@keyframes expand {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+.chart {
+  overflow: hidden;
+  width: 0%;
+  animation: expand 1.5s ease forwards;
+}
+.row + .row .chart {
+  animation-delay: .2s;
+}
+.row + .row + .row .chart {
+  animation-delay: .4s;
+}
+.block {
+  display: block;
+  height: 30px;
+  color: #fff;
+  font-size: .75em;
+  float: left;
+  background-color: #FF7B02;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity, .3s ease;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.block:nth-of-type(2) {
+  background-color: #B96601;
+}
+.block:nth-of-type(3) {
+  background-color: #03D4BF;
+}
+.block:nth-of-type(4) {
+  background-color: #6A8B5E;
+}
+.block:nth-of-type(5) {
+  background-color: #666666;
+}
+
+.block:hover {
+  opacity: .65;
+}
+.value {
+  display: block;
+  line-height: 1em;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+
+.legend {
+    margin: 0 auto;
+    padding: 0;
+    font-size: .9em;
+}
+.legend li {
+    display: inline-block;
+    padding: .25em 1.6em;
+    line-height: 1em;
+}
+
+.split-sub {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.const-box h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.const-box h1 span {
+  font-size: 10px;
+  background: green;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 3px 5px;
 }

@@ -2410,5 +2410,8 @@
       "leading": 0,
       "total": 0
     }
-  ]
+  ],
+  "tabledata": [ { "state": "State Unassigned", "statecode": "UN", "districtData": [ { "district": "Unassigned", "notes": "", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } } ] }, { "state": "Andaman and Nicobar Islands", "statecode": "AN", "districtData": [ { "district": "Nicobars", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "North and Middle Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 1, "deceased": 0, "recovered": 1, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "South Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 19, "confirmed": 51, "deceased": 0, "recovered": 32, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "Unknown", "notes": "", "active": -12, "confirmed": 4972, "deceased": 62, "recovered": 4922, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 }} ] }]
+
 }
+

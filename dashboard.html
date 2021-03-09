@@ -25,45 +25,121 @@
         <section class="const-carousel">
             <div id="owl-demo" class="owl-carousel"> </div>
         </section>
-        <section class="keycand-carousel">
-            <div id="owl-demo2" class="owl-carousel"> </div>
-        </section>
-        <!-- <section class="partywise-seats">
-            <svg class="parliamentseats" viewBox="0 0 375 200" preserveAspectRatio="xMinYMin" ></svg>
-        </section> -->
+        <div class="row split-2">
+            <section class="section-block partywise-data">
+                <header>
+                    <h3>Tamil Nadu <span>Seats</span></h3>
+                </header>
+                <div class="partywisedata-charts">
+                    <svg class="parliamentseats" viewBox="0 0 375 200" preserveAspectRatio="xMinYMin" ></svg>
+                    <div id="partywise-table" class="table"></div>
+                </div>
+            </section>
+            <section class="section-block geo-data">
+                <div class="assembly-map" id="tn"></div>
+            </section>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <!-- <script src="https://thefederal.com/embed/common-js/d3.v4.min.js"></script> -->
+    <script src='https://thefederal.com/embed/common-js/underscore-min.js' ></script>
+    <script src='https://thefederal.com/embed/common-js/d3.v4.min.js' ></script>
+    <script src='https://d3js.org/topojson.v2.min.js'></script>
+    <script src='js/d3-cooltip.0.1.0.min.js'></script>
+    <script src="js/map.js"></script>
     <script src="js/owl.carousel.js"></script>
-    <!-- <script src="js/d3-parliament.js"></script> -->
+    <script src="js/d3-parliament.js"></script>
     <script src="js/charts/carousel.js"></script>
-    <!-- <script src="js/charts/parliament-chart.js"></script> -->
+    <script src="js/charts/parliament-chart.js"></script>
+    <script src="js/charts/accordion-table.js"></script>
     <script type="text/javascript">
         carouselWidget('data.json', "#owl-demo", "constituencywise")
-        // var testdata = [
+        var testdata = [
                 
-        //     {
-        //         "id": "undeclared",
-        //         "legend": "Aam Aadmi Party",
-        //         "name": "Aam Aadmi Party",
-        //         "seats": 30
-        //     },
-        //     {
-        //         "id": "aap",
-        //         "legend": "Aam Aadmi Party",
-        //         "name": "Aam Aadmi Party",
-        //         "seats": 20
-        //     },
-        //     {
-        //         "id": "bjp",
-        //         "legend": "Bharatiya Janata Party",
-        //         "name": "Bharatiya Janata Party",
-        //         "seats": 20
-        //     }
-        // ]
+            {
+                "id": "undeclared",
+                "legend": "Aam Aadmi Party",
+                "name": "Aam Aadmi Party",
+                "seats": 30
+            },
+            {
+                "id": "aap",
+                "legend": "Aam Aadmi Party",
+                "name": "Aam Aadmi Party",
+                "seats": 20
+            },
+            {
+                "id": "bjp",
+                "legend": "Bharatiya Janata Party",
+                "name": "Bharatiya Janata Party",
+                "seats": 20
+            }
+        ]
+        var testdata2 = [
+            {
+            "party": "AIADMK",
+            "won": 0,
+            "leading": 0,
+            "total": 0
+            },
+            {
+            "party": "DMK",
+            "won": 0,
+            "leading": 0,
+            "total": 0
+            },
+            {
+            "party": "AMMK",
+            "won": 0,
+            "leading": 0,
+            "total": 0
+            },
+            {
+            "party": "MMM",
+            "won": 0,
+            "leading": 0,
+            "total": 0
+            },
+            {
+            "party": "Other",
+            "won": 0,
+            "leading": 0,
+            "total": 0
+            }
+        ]
 
-        // drawParliamentaryChart(".parliamentseats", "2016", testdata)
+        var indiaDistrictData = (function() {
+            var indiaDistrictData = null;
+            jQuery.ajax({
+                'async': false,
+                'global': false,
+                'dataType': 'json',
+                'url': 'data.json',
+                'success': function(data) {
+                    indiaDistrictData = data["tabledata"];
+                    
+                }
+            });
+            return indiaDistrictData;
+        })();
 
+        // let tnSettings = {
+        //     statecode: 'S22',
+        //     mapsource: 'maps/tamilnadu.json',
+        //     scale: 3400,
+        //     center: [78.6, 10.8]
+        //   }
+
+        console.log(indiaDistrictData);
+        drawParliamentaryChart(".parliamentseats", "2016", testdata)
+        // drawAccTable(testdata2, "#partywise-table")
+        drawAccTable(indiaDistrictData, "#partywise-table")
+
+        drawAssemblyMap("#tn", {
+            statecode: 'S22',
+            mapsource: 'maps/tamilnadu.json',
+            scale: 3400,
+            center: [78.6, 10.8]
+          })
     </script>
 
 </body>

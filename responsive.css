@@ -11,17 +11,25 @@
     }
     .contituency-items {
       width: 80%;
+      max-width: 350px;
+      min-width: 280px;
     }
     .contituency-items .leadingcand, .contituency-items .trailingcand {
       grid-template-columns: 60% 20%;
     }
-    .split-2 {
+    .split-2, .split-sub {
       grid-template-columns: none;
     }
     .candidate-items {
-      width: 85%;
+      width: 83%;
+      max-width: 350px;
+      min-width: 250px;
     }
     .legend {
       font-size: 10px;
     }
+
+    /* #owl-demo .owl-item {
+      width: 340px !important;
+    } */
   }

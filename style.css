@@ -564,3 +564,41 @@
   color: #fa8601;
   stroke: #fa8601;
 }
+
+
+/*Poll-Dashboard styles*/
+.tf_wrap.pollDash-wrap header h2 span {
+  color: #999;
+}
+#alphabetfilters {
+  margin-bottom: 20px;
+}
+
+ul#letters-listing {
+  overflow-wrap: break-word;
+  padding: 0;
+  margin: 0;
+}
+
+ul#letters-listing li {
+  display: inline;
+  padding: 0 15px 15px 5px;
+}
+
+ul#letters-listing li.clickable a {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+ul#letters-listing li.active a {
+  color: #f90;
+  border-bottom: 2px solid #f90;
+}
+
+ul#letters-listing li.disabled a {
+  cursor: not-allowed;
+  color: #ccc;
+}

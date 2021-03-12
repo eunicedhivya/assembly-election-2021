@@ -211,6 +211,18 @@
   padding: 0 33px;
 }
 
+.owl-carousel .owl-wrapper-outer::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 144px;
+  background-image: linear-gradient(to right, transparent, #fff);
+}
+.owl-carousel#owl-demo2 .owl-wrapper-outer::after { 
+  height: 110px;
+}
 .candidate-items {
   width: 98%;
   height: 100px;
@@ -323,6 +335,28 @@
   grid-template-columns: 50% 50%;
   column-gap: 20px;
 }
+.section-block header h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 25px;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+}
+
+.section-block .minus_icon {
+  margin-right: 5px;
+}
+
+.section-block header h3 span {
+  font-size: 15px;
+  padding-left: 3px;
+  line-height: 20px;
+}
+
+.section-block header .icon-span {
+  float: right;
+  margin: 5px 0 20px 0;
+} 
 
 /* SeatShare section */
 .seatshare,
@@ -332,7 +366,10 @@
 .seatshare h4,
 .partywise-voteshare h4 {
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 8px 0;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .seatshare figure,
@@ -436,7 +473,7 @@
   padding-bottom: 5px;
 }
 .const-box > h1 span {
-  font-size: 10px;
+  font-size: 7px;
   background: green;
   color: #fff;
   text-transform: uppercase;
@@ -466,10 +503,25 @@
   position: absolute;
   right: 5%;
   bottom: 50%;
+  font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
 }
 
 .const-box .cand-desc .trailingCand span {
   bottom: 10%;
+}
+
+.left-map .btn_filter{
+  width: 100%;
+  display: block;
+}
+.tf_wrap .btn_filter button {
+  width: 47%;
+  float: left;
+}
+.tf_wrap .btn_filter button#conts-2016 {
+  margin-right: 8px;
 }
 
 .table-wrap {

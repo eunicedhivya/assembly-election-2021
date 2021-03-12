@@ -215,13 +215,14 @@
   content: '';
   position: absolute;
   right: 0;
-  top: 0;
-  width: 40px;
-  height: 144px;
+  top: -4px;
+  width: 70px;
+  height: 154px;
   background-image: linear-gradient(to right, transparent, #fff);
 }
 .owl-carousel#owl-demo2 .owl-wrapper-outer::after { 
   height: 110px;
+  top: 0;
 }
 .candidate-items {
   width: 98%;

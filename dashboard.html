@@ -115,11 +115,15 @@
                 <div class="row split-sub">
                     <div class="left-map">
                         <div class="assembly-map" id="tn"></div>
-                        <div>
+                        <div class="const-filter">
                             <p>Select Constituency</p>
-                            <Select> 
+                            <Select id="const-list"> 
                                 <option value="Cochin">COCHIN</option>
                             </Select>
+                            <div class="btn_filter">
+                                <button id="conts-2016" class="active">2016</button>
+                                <button id="conts-2021">2021</button>
+                            </div>
                         </div>
                     </div>
                     <div class="right-const">
@@ -213,6 +217,10 @@
     <script src="js/charts/parliament-chart.js"></script>
     <script src="js/charts/accordion-table.js"></script>
     <script type="text/javascript">
+        var partycolors = {
+            "AIADMK": "#FF9900",
+            "DMK": "#9b59b6",
+        }
         carouselWidget('data.json', "#owl-demo", "constituencywise")
         var testdata = [
                 
@@ -268,6 +276,8 @@
             }
         ]
 
+        var constWiseData2016;
+
         var indiaDistrictData = (function() {
             var indiaDistrictData = null;
             jQuery.ajax({
@@ -277,7 +287,7 @@
                 'url': 'data.json',
                 'success': function(data) {
                     indiaDistrictData = data["tabledata"];
-                    
+                    constWiseData2016 = data["constituencywise"]
                 }
             });
             return indiaDistrictData;
@@ -290,7 +300,7 @@
         //     center: [78.6, 10.8]
         //   }
 
-        console.log(indiaDistrictData);
+        // console.log("constWiseData", constWiseData2016);
         drawParliamentaryChart(".parliamentseats", "2016", testdata)
         // drawAccTable(testdata2, "#partywise-table")
         drawAccTable(indiaDistrictData, "#partywise-table")
@@ -298,8 +308,8 @@
         drawAssemblyMap("#tn", {
             statecode: 'S22',
             mapsource: 'maps/tamilnadu.json',
-            scale: 3400,
-            center: [78.6, 10.8]
+            scale: 5100,
+            center: [78.3, 10.8]
           })
 
 

@@ -1,5 +1,5 @@
 function drawAssemblyMap(selector, settings){
-    var width = 430, height = 350, scale = 800, center = [83, 23];
+    var width = 430, height = 550, scale = 2000, center = [83, 23];
     var indiaSource = 'map/india.json'
     // var source = 'data/map/andhrapradesh-ac.json'
     var state = settings.statecode;
@@ -18,53 +18,17 @@ function drawAssemblyMap(selector, settings){
     .scale(settings.scale)
     .center(settings.center)
     .translate([width / 2, height / 2])
-    // .scale(scale)
-    // .center(center)
-    // .translate([width / 2, height / 2])
 
     var geoPath = d3.geoPath()
         .projection(projection)
 
-    // function centroids(boundarydata){
-    //     return boundarydata.map(function (d){
-    //         return projection(d3.geoCentroid(d))
-    //     });
-    // }
 
     
-    
-//     d3.json(indiaSource, function (error, indiashape) {
         d3.json(source, function(error, stateShape){
 
-            
-//             // console.log("constituenciesByStatein AE", constituenciesByState);
-            
-            
-            
-//             var indiaboundary = topojson.feature(indiashape, indiashape.objects.stateboundary).features;
             var stateconst = topojson.feature(stateShape, stateShape.objects.collection).features;
 
             console.log("stateboundary", stateconst);
-            
-            
-//             var constituenciesByState = {};
-//             var test = 0
-//             stateboundary.forEach(function(pc, i){
-//                 // console.log(i, pc.properties.ST_CODE);
-                
-//                 var code = pc.properties.ST_CODE;
-//                 if (!constituenciesByState[code]) {
-//                     constituenciesByState[code] = [];
-//                 }
-//                 constituenciesByState[code].push(pc);
-//             });
-//             var chosenState = _.filter(indiaboundary, function(d){
-//                 return d.properties.ST_CODE === state;
-//             })
-//             var stateCentroid = centroids(chosenState)
-//             // console.log(indiashape.objects.stateboundary.geometries);
-//             // console.log("constituenciesByStateAE", constituenciesByState);
-//             // console.log(stateCentroid);
 
             svg.selectAll(".state")
                         .data(stateconst).enter().append("path")
@@ -72,35 +36,62 @@ function drawAssemblyMap(selector, settings){
                         .attr("class", "state")
                         .attr('stroke', "#ffffff")
                         .attr('stroke-width', "0.5")
-                        .attr('fill', "#dad9d9")
+                        .attr('fill', function(d,i){
+                            var fd = constWiseData2016.filter(function(obj){
+                                // console.log(obj);
+                                return obj["Const. No."] === d.properties.AC_NO;
+                            })
+
+                            console.log("fd", fd[0]["Leading Party"]);
+            
+                            if(fd[0] !== undefined){
+                                return partycolors[fd[0]["Leading Party"]];
+                            }else{
+                                return "#FFFFFF";
+                            }
+                        })
                         .attr('stroke-opacity', "1")
                         .attr("data-statecode", function(d,i){
                             return d['properties']['ST_CODE'];
                         })
-//                         .on("click", function(d, i){
-//                             // alert(i)
+                        .on("click", function(d, i){
+                            console.log(i, d.properties)
 
-//                             d3.select("#aseconstleveldata").style("display", "none")
-//                             d3.select("#asestateleveldata").style("display", "block")
+                            var fd = constWiseData2016.filter(function(obj){
+                                // console.log(obj);
+                                return obj["Const. No."] === d.properties.AC_NO;
+                            })
+
+                            console.log("fd", fd[0]["Leading Party"]);
+            
+                            if(fd[0] !== undefined){
+                                return partycolors[fd[0]["Leading Party"]];
+                                // return partycolors[partyAbbrList[fd[0]['leadingParty']]];
+                            }else{
+                                return "#FFFFFF";
+                            }
+
+                            // d3.select("#aseconstleveldata").style("display", "none")
+                            // d3.select("#asestateleveldata").style("display", "block")
                             
-//                             var fd = _.filter(asePartywise2019, function(t){
-//                                 return t.Statecode === d.properties.ST_CODE; 
-//                             })
-//                             // console.log(d.properties.ST_CODE, fd);
+                            // var fd = _.filter(asePartywise2019, function(t){
+                            //     return t.Statecode === d.properties.ST_CODE; 
+                            // })
+                            // // console.log(d.properties.ST_CODE, fd);
                             
-//                             d3.select("#ase-stateleadingparty").html(
-//                                 fd.Party
-//                             )
+                            // d3.select("#ase-stateleadingparty").html(
+                            //     fd.Party
+                            // )
 
-//                             var tempConstSum = fd.reduce((s, f) => {
-//                                 return s + f.Won;               // return the sum of the accumulator and the current time, as the the new accumulator
-//                             }, 0);
+                            // var tempConstSum = fd.reduce((s, f) => {
+                            //     return s + f.Won;               // return the sum of the accumulator and the current time, as the the new accumulator
+                            // }, 0);
 
-//                             d3.select("#ase-st-name").html( fd[0].Statename )
-//                             d3.select("#noofseatsinAse").html( tempConstSum )
-//                             d3.select("#ase-stateleadingparty").html( fd[0].Party )
-//                             d3.select("#ase-statetrailingingparty").html( fd[1].Party )
-//                         })
+                            // d3.select("#ase-st-name").html( fd[0].Statename )
+                            // d3.select("#noofseatsinAse").html( tempConstSum )
+                            // d3.select("#ase-stateleadingparty").html( fd[0].Party )
+                            // d3.select("#ase-statetrailingingparty").html( fd[1].Party )
+                        })
 
 //             var statePC = svg.selectAll(".statewise-seats").data(stateCentroid)
 //                 .enter().append("svg")

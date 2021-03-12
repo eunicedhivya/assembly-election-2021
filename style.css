@@ -208,11 +208,11 @@
   overflow: hidden;
   position: relative;
   width: 95%;
-  padding: 0 33px;
+  padding: 8px 33px;
 }
 
 .owl-carousel .owl-wrapper-outer::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: -4px;
@@ -220,7 +220,7 @@
   height: 154px;
   background-image: linear-gradient(to right, transparent, #fff);
 }
-.owl-carousel#owl-demo2 .owl-wrapper-outer::after { 
+.owl-carousel#owl-demo2 .owl-wrapper-outer::after {
   height: 110px;
   top: 0;
 }
@@ -357,7 +357,7 @@
 .section-block header .icon-span {
   float: right;
   margin: 5px 0 20px 0;
-} 
+}
 
 /* SeatShare section */
 .seatshare,
@@ -505,15 +505,15 @@
   right: 5%;
   bottom: 50%;
   font-size: 12px;
-    line-height: 16px;
-    font-weight: 600;
+  line-height: 16px;
+  font-weight: 600;
 }
 
 .const-box .cand-desc .trailingCand span {
   bottom: 10%;
 }
 
-.left-map .btn_filter{
+.left-map .btn_filter {
   width: 100%;
   display: block;
 }

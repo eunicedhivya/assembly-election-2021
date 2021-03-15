@@ -149,9 +149,10 @@
     padding: 10px 0;
 }
 
-        .candidate-items{
-            width: 98%;
-            height: 100px;
+        .poll-candidate-items{
+            width: 97%;
+            /* max-width: 375px; */
+            height: 165px;
             background-color: #f8f8f8;
             border-radius: 14px;
             box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
@@ -160,23 +161,21 @@
             box-sizing: border-box;
             text-align: left;
             position: relative;
-            width: 97%;
-            height: 110px;
         }
-        .candidate-items img {
+        .poll-candidate-items img {
             max-width: 80px;
             position: absolute;
             bottom: 0;
             left: 12px;
         }
-        .candidate-items .cand-info {
-            width: 75%;
-            margin: 0 0 0 30%;
+        .poll-candidate-items .cand-info {
+            width: 72%;
+            margin: 0 0 0 28%;
             padding: 10px 15px;
             box-sizing: border-box;
         }
 
-        .candidate-items h4{
+        .poll-candidate-items h4{
             font-family: 'Rubik', sans-serif;
             font-size: 14px;
             font-weight: 400;
@@ -185,13 +184,13 @@
             line-height: 14px;
         }
 
-        .candidate-items h4 span{
+        .poll-candidate-items h4 span{
             display: block;
             font-size: 11px;
             font-weight: 400;
             color: #999;
         }
-        .candidate-items .cand-votes{
+        .poll-candidate-items .cand-votes{
             font-family: 'Rubik', sans-serif;
             display: block;
             font-size: 11px;
@@ -201,12 +200,12 @@
             position: relative;
             padding: 0 8px;
         }
-        .candidate-items .cand-votes span{
+        .poll-candidate-items .cand-votes span{
             display: inline-block;
             margin-right: 10px;
             text-transform: uppercase;
         }
-        .candidate-items .cand-votes::before{
+        .poll-candidate-items .cand-votes::before{
             content: '';
             background-color: #008000;
             width: 6px;
@@ -216,11 +215,31 @@
             border-radius: 50%;
             left: 0;
         }
-        .candidate-items .cand-cont{
+        .poll-candidate-items .cand-cont{
             font-family: 'Rubik', sans-serif;
             font-size: 11px;
             font-weight: 600;
             margin:5px 0;
+        }
+        .poll-candidate-items .cand-meta{
+            list-style: none;
+            font-family: 'Rubik';
+            margin: 0;
+            padding: 0;
+            
+        }
+        .poll-candidate-items .cand-meta li {
+            display: inline-block;
+            font-size: 12px;
+            margin:0 0 5px 0;
+            padding:0 10px 0 0;
+            
+        }
+        .poll-candidate-items .cand-meta li span {
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+
         }
         .arrow {
             border: solid black;
@@ -238,11 +257,126 @@
             transform: rotate(135deg);
             -webkit-transform: rotate(135deg);
             }
+
+        .turnout-items{
+            width: 100%;
+            /* max-width: 300px; */
+            height: 165px;
+            background-color: #f8f8f8;
+            border-radius: 14px;
+            box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
+            -webkit-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
+            -moz-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .turnout-items h3{
+            font-family: 'Rubik', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            
+            background-color: #e8e8e8;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 0 0 15px;
+            margin: 0 0 10px 0;
+        }
+        .turnout-items h3 span{
+            font-weight: 600;
+        }
+        .turnout-items .turnout-content{
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .turnout-items .battery-chart{
+            display: grid;
+            grid-template-columns: 80% 20%;
+            column-gap: 10px;
+        }
+        .turnout-items .battery-chart .bar{
+            background-color: #e8e8e8;
+            height: 30px;
+        }
+        .turnout-items .battery-chart .bar .barlevel{
+            height: 30px;
+        }
+        .turnout-items .battery-chart .level{
+            font-size: 20px;
+            font-family: 'Rubik';
+            line-height: 30px;
+            font-weight: 500;
+        }
+        .turnout-items .turnout-2021{
+            margin-bottom: 20px;
+        }
+        .turnout-items .turnout-2016 .bar, .turnout-items .turnout-2016 .bar .barlevel{
+            height: 15px;
+        }
+        .turnout-items .turnout-2016 {
+            grid-template-columns: 65% 35%;
+        }
+        .turnout-items .turnout-2016 .level {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        .turnout-items .split-2{
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+        .turnout-items .split-2 div{
+            line-height: 18px;
+            font-family: "Rubik";
+        }
+        .turnout-items .split-2 div span{
+            font-weight: 500;
+        }
     </style>
     
 </head>
 <body>
-    <div class="contituency-items">
+    <!-- <div class="poll-candidate-items">
+        <img src="img/profile.png" alt="">
+        <div class="cand-info">
+            <h4>Karuppusamy Selvam Karuppusamy Selvam Selvam<span>AIADMK</span></h4>
+            <p class="cand-cont">Kallakurichi</p>
+            <hr>
+            <ul class="cand-meta">
+                <li>Education <span>B.Sc</span></li>
+                <li>Networth <span>2.2cr</span></li>
+                <li>Networth (2016) <span>2.2cr</span></li>
+                <li>liabilities <span>1.5cr</span></li>
+                <li>Criminal cases <span>1.5cr</span></li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- <div class="turnout-items">
+        <h3> Tamil Nadu | <span>updated time: 11.20pm</span> </h3>
+        <div class="turnout-content">
+            <div class="battery-chart turnout-2021">
+                <div class="bar">
+                    <div class="barlevel" style="width:85%;background-color: red;"></div>
+                </div>
+                <div class="level">85%</div>
+            </div>
+            <div class="split-2">
+                <div>
+                    Total electorate
+                    <span>11203030</span>
+                </div>
+                <div>
+                    Turnout 2016
+                    <div class="battery-chart turnout-2016">
+                        <div class="bar">
+                            <div class="barlevel" style="width:85%;background-color: red;"></div>
+                        </div>
+                        <div class="level">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="contituency-items">
         <h3> Tamil Nadu | <span>Kallakurichi</span> </h3>
         <span class="leadingindicator">Leading</span>
         <div class="leadingcand">
@@ -262,10 +396,13 @@
             <p class="cand-cont">Kallakurichi</p>
             <p class="cand-votes"><span>Leading</span> 3456567</p>
         </div>
-    </div>
+    </div> -->
     <div id="owl-demo" class="owl-carousel"> </div>
     <div id="owl-demo2" class="owl-carousel"> </div>
+    <div id="owl-demo3" class="owl-carousel"> </div>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src='https://thefederal.com/embed/common-js/d3.v4.min.js' ></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script>
        $(document).ready(function() {
@@ -284,30 +421,46 @@
         });
 
         function customDataSuccess(data){
-            var content = "";
-            for(var i in data["constituencywise"]){
-                
-                var constituencyname = data["constituencywise"][i].Constituency;
-                var leadingname = data["constituencywise"][i]["Leading Candidate"];
-                var leadingparty = data["constituencywise"][i]["Leading Party"];
-                var leadingmargin = data["constituencywise"][i]["Margin"];
-                var trailingname = data["constituencywise"][i]["Trailing Candidate"];
-                var trailingparty = data["constituencywise"][i]["Trailing Party"];
-                var trailingmargin = data["constituencywise"][i]["Margin"];
 
-                html = '<div class="contituency-items">'
-                html += '<h3> Tamil Nadu | <span>'+constituencyname+'</span> </h3>'
-                html += '<span class="leadingindicator">Leading</span>'
-                html += '<div class="leadingcand">'
-                html += '<h4>'+leadingname+'<span>'+leadingparty+'</span></h4>'
-                html += '<p>'+leadingmargin.toLocaleString('en-IN')+'</p>'
-                html += '</div>'
-                html += '<span class="trailingindicator">Leading</span>'        
-                html += '<div class="trailingcand">'
-                html += '<h4>'+trailingname+' <span>'+trailingparty+'</span></h4>'
-                html += '<p>'+trailingmargin.toLocaleString('en-IN')+'</p>'
-                html += '</div>'
-                html += '</div>'
+            var myColor = d3.scaleSequential()
+                .domain([0, 100])
+                .interpolator(d3.interpolateYlGn);
+
+
+            var content = "";
+            for(var i in data["wb-polling-day"]){
+                
+                var constname = data["wb-polling-day"][i]["constname"];
+                var turnout2021 = data["wb-polling-day"][i]["turnout2021"];
+                var turnout2016 = data["wb-polling-day"][i]["turnout2016"];
+                var totalElectorate = data["wb-polling-day"][i]["totalElectorate"];
+
+                html = '<div class="turnout-items">'
+                html += '<h3> '+constname+' | as of: <span>11.20pm</span> </h3>'
+                html += '<div class="turnout-content">'
+                html += '<div class="battery-chart turnout-2021">'
+                html += '<div class="bar">'
+                html +=  '<div class="barlevel" style="width:'+turnout2021+'%;background-color: '+myColor(turnout2021)+';"></div>'
+                html +=  '</div>'
+                html +=  '<div class="level">'+turnout2021+'%</div>'
+                html +=  '</div>'        
+                html +=  '<div class="split-2">'
+                html +=  '<div>'
+                html +=  'Total electorate' 
+                html +=  ' <span>'+totalElectorate.toLocaleString('en-IN')+'</span>'
+                html +=  '</div>'
+                html +=  '<div>'
+                html +=  'Turnout 2016'
+                html +=  '<div class="battery-chart turnout-2016">'
+                html +=  '<div class="bar">'
+                html +=  '<div class="barlevel" style="width:'+turnout2016+'%;background-color: red;"></div>'
+                html +=  '</div>'
+                html +=  '<div class="level">'+turnout2016+'%</div>'
+                html +=  '</div>'
+                html +=  '</div>'
+                html +=  '</div>'
+                html +=  '</div>'
+                html +=  '</div>'
 
                 //   content += "<img src=\"" +img+ "\" alt=\"" +alt+ "\">"
                 // content += "<p>"+alt+"</p>"
@@ -331,23 +484,59 @@
 
         function customDataSuccess1(data) {
                 var cand = "";
-                for(var j in data["keycandidate"]){
+                for(var j in data["wb-keycandidate"]){
                     
                     // var img = data["keycandidate"][j].["img/profile.png"];
-                    var keycandidatename = data["keycandidate"][j].candidatename;
-                    var keycandidateplace = data["keycandidate"][j].constname;
-                    var keycandidateparty = data["keycandidate"][j].party;
-                    var keycandidateleading = data["keycandidate"][j].leadortrail;
-                    var keycandidatevotes = data["keycandidate"][j].votes
-                    
-                    html = '<div class="candidate-items">'
+
+                    // "phase": "I",
+                    // "constno": 12,
+                    // "constname": "Kallakurichi",
+                    // "candidatename": "Edappadi Karuppa Palaniswami",
+                    // "candidateparty": "AIADMK",
+                    // "age": 50,
+                    // "education": "graduate",
+                    // "networth2016": "2 crore",
+                    // "networth2021": "2 crore",
+                    // "liabilities": "2 crore",
+                    // "criminalcases": 2
+                    var phase = data["wb-keycandidate"][j].phase;
+                    var keyconstno = data["wb-keycandidate"][j].constno;
+                    var keyconstname = data["wb-keycandidate"][j].constname;
+                    var keycandidatename = data["wb-keycandidate"][j].candidatename;
+                    var keycandidateparty = data["wb-keycandidate"][j].candidateparty
+                    var keycandidateage = data["wb-keycandidate"][j].age
+                    var keycandidateedu = data["wb-keycandidate"][j].education
+                    var keycandidatenet2016 = data["wb-keycandidate"][j].networth2016
+                    var keycandidatenet2021 = data["wb-keycandidate"][j].networth2021
+                    var keyliabilities = data["wb-keycandidate"][j].liabilities
+                    var keycriminals = data["wb-keycandidate"][j].criminalcases
+
+                    html = '<div class="poll-candidate-items">'
                     html += '<img src="img/profile.png" alt="">'
                     html += '<div class="cand-info">'
-                    html += '<h4>'+ keycandidatename +'<span>'+ keycandidateparty +'</span></h4>'
-                    html += '<p class="cand-cont">'+ keycandidateplace +'</p>'
-                    html += '<p class="cand-votes"><span>'+keycandidateleading +'</span> '+keycandidatevotes.toLocaleString('en-IN') +'</p>'
+                    html += '<h4>'+keycandidatename+'<span>'+keycandidateparty+'</span></h4>'
+                    html += '<p class="cand-cont">'+keyconstname+'</p>'
+                    html += '<hr>'
+                    html += '<ul class="cand-meta">'
+                    html += '<li>Education <span>'+keycandidateedu+'</span></li>'
+                    html += '<li>Networth <span>'+keycandidatenet2021+'</span></li>'
+                    html += '<li>Networth (2016) <span>'+keycandidatenet2016+'</span></li>'
+                    html += '<li>liabilities <span>'+keyliabilities+'</span></li>'
+                    html += '<li>Criminal cases <span>'+keycriminals+'</span></li>'
+                    html += '</ul>'
                     html += '</div>'
                     html += '</div>'
+
+                    
+                    // html = '<div class="candidate-items">'
+                    // html += '<img src="img/profile.png" alt="">'
+                    // html += '<div class="cand-info">'
+                    // html += '<h4>'+ keycandidatename +'<span>'+ keycandidateparty +'</span></h4>'
+                    // html += '<p class="cand-cont">'+ keycandidateplace +'</p>'
+                    // html += '<p class="cand-votes"><span>'+keycandidateleading +'</span> '+keycandidatevotes.toLocaleString('en-IN') +'</p>'
+                    // html += '</div>'
+                    // html += '</div>'
+
                     cand += html
                 }
                 $("#owl-demo2").html(cand);

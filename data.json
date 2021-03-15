@@ -2411,7 +2411,166 @@
       "total": 0
     }
   ],
-  "tabledata": [ { "state": "State Unassigned", "statecode": "UN", "districtData": [ { "district": "Unassigned", "notes": "", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } } ] }, { "state": "Andaman and Nicobar Islands", "statecode": "AN", "districtData": [ { "district": "Nicobars", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "North and Middle Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 1, "deceased": 0, "recovered": 1, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "South Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 19, "confirmed": 51, "deceased": 0, "recovered": 32, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "Unknown", "notes": "", "active": -12, "confirmed": 4972, "deceased": 62, "recovered": 4922, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 }} ] }]
+  "tabledata": [ { "state": "State Unassigned", "statecode": "UN", "districtData": [ { "district": "Unassigned", "notes": "", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } } ] }, { "state": "Andaman and Nicobar Islands", "statecode": "AN", "districtData": [ { "district": "Nicobars", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "North and Middle Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 1, "deceased": 0, "recovered": 1, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "South Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 19, "confirmed": 51, "deceased": 0, "recovered": 32, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "Unknown", "notes": "", "active": -12, "confirmed": 4972, "deceased": 62, "recovered": 4922, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 }} ] }],
+  "wb-polling-day": [
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "1 Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 78,
+      "turnout2021": 60,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 56,
+      "turnout2021": 30,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 60,
+      "turnout2021": 55,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 39,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 64,
+      "turnout2021": 64,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 39,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 1,
+      "constname": "last Kallakurichi",
+      "totalElectorate": 123333333,
+      "turnout2016": 78,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    }
+  ],
+  "wb-keycandidate": [
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Chennai",
+      "candidatename": "Edappadi Karuppa Palaniswami",
+      "candidateparty": "AIADMK",
+      "age": 50,
+      "education": "graduate",
+      "networth2016": "2 crore",
+      "networth2021": "2 crore",
+      "liabilities": "2 crore",
+      "criminalcases": 2
+    },
+    {
+      "phase": "I",
+      "constno": 3,
+      "constname": "Chennai",
+      "candidatename": "Ottakarathevar Panneerselvam",
+      "candidateparty": "AIADMK",
+      "age": 40,
+      "education": "graduate",
+      "networth2016": "3 crore",
+      "networth2021": "3 crore",
+      "liabilities": "3 crore",
+      "criminalcases": 10
+    },
+    {
+      "phase": "I",
+      "constno": 5,
+      "constname": "Madurai",
+      "candidatename": "T. T. V. Dhinakaran",
+      "candidateparty": "Amma Makkal Munnettra Kazagam",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "4 crore",
+      "networth2021": "4 crore",
+      "liabilities": "4 crore",
+      "criminalcases": 3
+    },
+    {
+      "phase": "I",
+      "constno": 6,
+      "constname": "Trichy",
+      "candidatename": "M. K. Stalin",
+      "candidateparty": "M. K. Stalin",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "5 crore",
+      "networth2021": "5 crore",
+      "liabilities": "5 crore",
+      "criminalcases": 5
+    },
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Kallakurichi",
+      "candidatename": "Vijayakanth",
+      "candidateparty": "Desiya Murpokku Dravida Kazhagam",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "6 crore",
+      "networth2021": "6 crore",
+      "liabilities": "6 crore",
+      "criminalcases": 6
+    },
+    {
+      "phase": "I",
+      "constno": 3,
+      "constname": "Chennai",
+      "candidatename": "Senthamizhan Seeman",
+      "candidateparty": "Naam Tamilar Katchi",
+      "age": 40,
+      "education": "graduate",
+      "networth2016": "7 crore",
+      "networth2021": "7 crore",
+      "liabilities": "7 crore",
+      "criminalcases": 3
+    },
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Kallakurichi",
+      "candidatename": "Karupusamy Selvam",
+      "candidateparty": "Naam Tamilar Katchi",
+      "age": 35,
+      "education": "graduate",
+      "networth2016": "8 crore",
+      "networth2021": "8 crore",
+      "liabilities": "8 crore",
+      "criminalcases": 2
+    }
+  ]
+
 
 }
 

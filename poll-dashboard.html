@@ -54,30 +54,30 @@
             </ul>
         </div>
         <section class="const-carousel">
-            <div id="owl-demo" class="owl-carousel"> </div>
+            <div id="poll-carous1" class="owl-carousel"> </div>
         </section>
         <header class="dash-header">
             <h2>Candidate Watch</span></h2>
         </header>
         <section class="const-carousel">
-            <div id="owl-demo2" class="owl-carousel"> </div>
+            <div id="poll-carous2" class="owl-carousel"> </div>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src='https://thefederal.com/embed/common-js/underscore-min.js' ></script>
     <script src='https://thefederal.com/embed/common-js/d3.v4.min.js' ></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src='https://d3js.org/topojson.v2.min.js'></script>
     <script src='js/d3-cooltip.0.1.0.min.js'></script>
     <script src="js/map.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/d3-parliament.js"></script>
-    <script src="js/charts/carousel.js"></script>
+    <script src="js/charts/poll-carousel.js"></script>
     <script type="text/javascript">
-        carouselWidget('data.json', "#owl-demo", "constituencywise")
+        pollcarouselWidget('data.json', "#poll-carous1", "wb-polling-day")
         jQuery("ul#letters-listing li.clickable").click(function() {
             $('ul#letters-listing li').removeClass('active');
             $(this).addClass('active');
-            // $(this).toggleClass("active")
         })
     </script>
 

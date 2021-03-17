@@ -34,6 +34,38 @@
   #owl-demo .owl-item {
     margin: 5px auto;
   }
+  .owl-carousel .owl-wrapper-outer {
+    padding-left: 0;
+  }
+  .poll-candidate-items {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+  .turnout-items {
+    width: 80%;
+    max-width: 310px;
+    margin: 0 auto;
+    height: 165px;
+  }
+  #poll-carous1 .owl-item {
+    margin: 0 auto;
+    text-align: left;
+  }
+  #poll-carous1.owl-carousel .owl-wrapper-outer::after, #poll-carous2.owl-carousel .owl-wrapper-outer::after {
+    right: -28px;
+    top: -4px;
+    width: 30px;
+  }
+  .poll-candidate-items .cand-meta li span {
+    font-size: 12px;
+  }
+  /* #poll-carous1.owl-carousel .owl-item {
+    width: 300px !important;
+  } */
+  /* #poll-carous2.owl-carousel .owl-item {
+    width: 360px !important;
+  } */
+ 
 }
 @media (min-width: 1000px) {
   .left-map {

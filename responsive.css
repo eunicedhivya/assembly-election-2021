@@ -38,12 +38,12 @@
     padding-left: 0;
   }
   .poll-candidate-items {
-    max-width: 310px;
+    /* max-width: 310px; */
     margin: 0 auto;
   }
   .turnout-items {
-    width: 80%;
-    max-width: 310px;
+    width: 90%;
+    /* max-width: 310px; */
     margin: 0 auto;
     height: 165px;
   }
@@ -59,9 +59,9 @@
   .poll-candidate-items .cand-meta li span {
     font-size: 12px;
   }
-  /* #poll-carous1.owl-carousel .owl-item {
-    width: 300px !important;
-  } */
+  #poll-carous1.owl-carousel .owl-item, #poll-carous2.owl-carousel .owl-item {
+    width: 318px !important;
+  }
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */

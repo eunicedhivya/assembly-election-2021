@@ -63,7 +63,8 @@
 /* ++++++++++++++++++++++++++ */
 /* Carousel Section */
 
-#owl-demo .owl-item, #poll-carous1 .owl-item {
+#owl-demo .owl-item,
+#poll-carous1 .owl-item {
   padding: 0px 0px;
   display: block;
   margin: 5px;
@@ -296,6 +297,7 @@
   font-size: 11px;
   font-weight: 600;
   margin: 5px 0;
+  display: inline-block;
 }
 .arrow {
   border: solid black;
@@ -565,7 +567,6 @@
   stroke: #fa8601;
 }
 
-
 /*Poll-Dashboard styles*/
 .tf_wrap.pollDash-wrap header h2 span {
   color: #999;
@@ -603,15 +604,15 @@ ul#letters-listing li.disabled a {
   color: #ccc;
 }
 
-.poll-candidate-items{
+.poll-candidate-items {
   width: 97%;
   /* max-width: 375px; */
-  height: 180px;
+  height: 150px;
   background-color: #f8f8f8;
   border-radius: 14px;
-  box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
-  -webkit-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
-  -moz-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
+  box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
   box-sizing: border-box;
   text-align: left;
   position: relative;
@@ -629,8 +630,8 @@ ul#letters-listing li.disabled a {
   box-sizing: border-box;
 }
 
-.poll-candidate-items h4{
-  font-family: 'Rubik', sans-serif;
+.poll-candidate-items h4 {
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
@@ -638,8 +639,8 @@ ul#letters-listing li.disabled a {
   line-height: 14px;
 }
 
-.poll-candidate-items h4 span{
-  display: block;
+.poll-candidate-items h4 span {
+  display: inline-block;
   font-size: 11px;
   font-weight: 400;
   color: #999;
@@ -651,23 +652,23 @@ ul#letters-listing li.disabled a {
   color: #999;
 }
 
-.poll-candidate-items .cand-votes{
-  font-family: 'Rubik', sans-serif;
+.poll-candidate-items .cand-votes {
+  font-family: "Rubik", sans-serif;
   display: block;
   font-size: 11px;
   font-weight: 400;
   color: #008000;
-  margin:5px 0;
+  margin: 5px 0;
   position: relative;
   padding: 0 8px;
 }
-.poll-candidate-items .cand-votes span{
+.poll-candidate-items .cand-votes span {
   display: inline-block;
   margin-right: 10px;
   text-transform: uppercase;
 }
-.poll-candidate-items .cand-votes::before{
-  content: '';
+.poll-candidate-items .cand-votes::before {
+  content: "";
   background-color: #008000;
   width: 6px;
   height: 6px;
@@ -676,16 +677,16 @@ ul#letters-listing li.disabled a {
   border-radius: 50%;
   left: 0;
 }
-.poll-candidate-items .cand-cont{
-  font-family: 'Rubik', sans-serif;
+.poll-candidate-items .cand-cont {
+  font-family: "Rubik", sans-serif;
   font-size: 11px;
   font-weight: 400;
   margin: 5px 0;
   color: red;
 }
-.poll-candidate-items .cand-meta{
+.poll-candidate-items .cand-meta {
   list-style: none;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   margin: 0;
   padding: 0;
   display: flex;
@@ -695,52 +696,61 @@ ul#letters-listing li.disabled a {
   font-size: 10px;
   margin: 0 0 5px 0;
   padding: 0 10px 0 0;
-  line-height: 13px;
+  line-height: 10px;
   color: #999;
-  
+}
+.poll-candidate-items hr {
+  margin: 5px 0 6px 0;
+  background-color: #ccc;
+  color: #ccc;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 0;
 }
 .poll-candidate-items .cand-meta li:last-child {
   padding: 0;
 }
 .poll-candidate-items .cand-meta li span {
   display: block;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #000;
   margin-top: 5px;
 }
 .arrow {
   border: solid black;
-border-width: 0 1px 1px 0;
-display: inline-block;
-padding: 10px;
-  }
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
 
-  .right {
+.right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  }
+}
 
-  .left {
+.left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-  }
+}
 
-.turnout-items{
+.turnout-items {
   width: 100%;
   /* max-width: 300px; */
   /* height: 165px; */
-  height: 150px;
+  height: 140px;
   background-color: #f8f8f8;
   border-radius: 14px;
-  box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
-  -webkit-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
-  -moz-box-shadow: 0px 1px 5px 2px rgba(120,120,120,0.41);
+  box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
   box-sizing: border-box;
   text-align: left;
 }
-.turnout-items h3{
-  font-family: 'Rubik', sans-serif;
+.turnout-items h3 {
+  font-family: "Rubik", sans-serif;
   font-size: 12px;
   font-weight: 400;
   border-radius: 14px 14px 0 0;
@@ -755,32 +765,33 @@ padding: 10px;
 /* .turnout-items h3 span{
   font-weight: 600;
 } */
-.turnout-items .turnout-content{
+.turnout-items .turnout-content {
   padding: 15px;
   box-sizing: border-box;
 }
-.turnout-items .battery-chart{
+.turnout-items .battery-chart {
   display: grid;
   grid-template-columns: 80% 20%;
   column-gap: 10px;
 }
-.turnout-items .battery-chart .bar{
+.turnout-items .battery-chart .bar {
   background-color: #e8e8e8;
-  height: 30px;
+  height: 25px;
 }
-.turnout-items .battery-chart .bar .barlevel{
-  height: 30px;
+.turnout-items .battery-chart .bar .barlevel {
+  height: 25px;
 }
-.turnout-items .battery-chart .level{
+.turnout-items .battery-chart .level {
   font-size: 20px;
-  font-family: 'Rubik';
-  line-height: 30px;
+  font-family: "Rubik";
+  line-height: 25px;
   font-weight: 500;
 }
-.turnout-items .turnout-2021{
-  margin-bottom: 20px;
+.turnout-items .turnout-2021 {
+  margin-bottom: 15px;
 }
-.turnout-items .turnout-2016 .bar, .turnout-items .turnout-2016 .bar .barlevel{
+.turnout-items .turnout-2016 .bar,
+.turnout-items .turnout-2016 .bar .barlevel {
   height: 15px;
 }
 .turnout-items .turnout-2016 {
@@ -789,29 +800,29 @@ padding: 10px;
 .turnout-items .turnout-2016 .level {
   font-size: 13px;
   line-height: 15px;
-  color: #CCCCCC;
+  color: #cccccc;
   font-weight: 400;
 }
-.turnout-items .split-2{
+.turnout-items .split-2 {
   display: grid;
   grid-template-columns: 40% 60%;
 }
-.turnout-items .split-2 div{
+.turnout-items .split-2 div {
   line-height: 18px;
   font-family: "Rubik";
   font-size: 16px;
   font-weight: 500;
 }
-.turnout-items .split-2 div span{
+.turnout-items .split-2 div span {
   font-weight: 500;
-  color: #CCCCCC;
+  color: #cccccc;
   font-size: 18px;
   line-height: 30px;
 }
-.turnout-items .split-2 div h4{
+.turnout-items .split-2 div h4 {
   font-weight: 500;
   margin: 0 0 5px 0;
-  color: #CCCCCC;
+  color: #cccccc;
   font-size: 14px;
   line-height: 16px;
 }

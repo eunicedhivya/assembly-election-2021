@@ -2412,162 +2412,276 @@
     }
   ],
   "tabledata": [ { "state": "State Unassigned", "statecode": "UN", "districtData": [ { "district": "Unassigned", "notes": "", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } } ] }, { "state": "Andaman and Nicobar Islands", "statecode": "AN", "districtData": [ { "district": "Nicobars", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 0, "deceased": 0, "recovered": 0, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "North and Middle Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 0, "confirmed": 1, "deceased": 0, "recovered": 1, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "South Andaman", "notes": "District-wise numbers are out-dated as cumulative counts for each district are not reported in bulletin", "active": 19, "confirmed": 51, "deceased": 0, "recovered": 32, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 } }, { "district": "Unknown", "notes": "", "active": -12, "confirmed": 4972, "deceased": 62, "recovered": 4922, "delta": { "confirmed": 0, "deceased": 0, "recovered": 0 }} ] }],
-  "wb-polling-day": [
+  "wb-polling-day":  [
     {
       "phase": "I",
-      "constno": 1,
-      "constname": "1 Kallakurichi",
+      "constno": 240,
+      "constname": "Baghmundi",
       "totalElectorate": 123333333,
-      "turnout2016": 78,
+      "turnout2016": 83.3,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 239,
+      "constname": "Balarampur",
+      "totalElectorate": 123333333,
+      "turnout2016": 82.4,
+      "turnout2021": 56,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 238,
+      "constname": "Bandwan",
+      "totalElectorate": 123333333,
+      "turnout2016": 83.6,
       "turnout2021": 60,
       "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 1,
-      "constname": "Kallakurichi",
+      "constno": 214,
+      "constname": "Bhagabanpur",
       "totalElectorate": 123333333,
-      "turnout2016": 56,
-      "turnout2021": 30,
-      "timeupdated": "7.00pm"
-    },
-    {
-      "phase": "I",
-      "constno": 1,
-      "constname": "Kallakurichi",
-      "totalElectorate": 123333333,
-      "turnout2016": 60,
-      "turnout2021": 55,
-      "timeupdated": "7.00pm"
-    },
-    {
-      "phase": "I",
-      "constno": 1,
-      "constname": "Kallakurichi",
-      "totalElectorate": 123333333,
-      "turnout2016": 39,
+      "turnout2016": 88.2,
       "turnout2021": 39,
       "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 1,
-      "constname": "Kallakurichi",
+      "constno": 237,
+      "constname": "Binpur",
       "totalElectorate": 123333333,
-      "turnout2016": 64,
+      "turnout2016": 81.7,
       "turnout2021": 64,
       "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 1,
-      "constname": "Kallakurichi",
+      "constno": 248,
+      "constname": "Chhatna",
       "totalElectorate": 123333333,
-      "turnout2016": 39,
+      "turnout2016": 77.7,
       "turnout2021": 39,
       "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 1,
-      "constname": "last Kallakurichi",
+      "constno": 219,
+      "constname": "Dantan",
       "totalElectorate": 123333333,
-      "turnout2016": 78,
+      "turnout2016": 83.7,
       "turnout2021": 78,
       "timeupdated": "7.00pm"
-    }
-  ],
-  "wb-keycandidate": [
-    {
-      "phase": "I",
-      "constno": 12,
-      "constname": "Chennai",
-      "candidatename": "Edappadi Karuppa Palaniswami",
-      "candidateparty": "AIADMK",
-      "age": 50,
-      "education": "graduate",
-      "networth2016": "2 crore",
-      "networth2021": "2 crore",
-      "liabilities": "2 crore",
-      "criminalcases": 2
     },
     {
       "phase": "I",
-      "constno": 3,
-      "constname": "Chennai",
-      "candidatename": "Ottakarathevar Panneerselvam",
-      "candidateparty": "AIADMK",
-      "age": 40,
-      "education": "graduate",
-      "networth2016": "3 crore",
-      "networth2021": "3 crore",
-      "liabilities": "3 crore",
-      "criminalcases": 10
+      "constno": 218,
+      "constname": "Egra",
+      "totalElectorate": 123333333,
+      "turnout2016": 83.5,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 5,
-      "constname": "Madurai",
-      "candidatename": "T. T. V. Dhinakaran",
-      "candidateparty": "Amma Makkal Munnettra Kazagam",
-      "age": 60,
-      "education": "graduate",
-      "networth2016": "4 crore",
-      "networth2021": "4 crore",
-      "liabilities": "4 crore",
-      "criminalcases": 3
+      "constno": 233,
+      "constname": "Garbeta",
+      "totalElectorate": 123333333,
+      "turnout2016": 89.3,
+      "turnout2021": 56,
+      "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 6,
-      "constname": "Trichy",
-      "candidatename": "M. K. Stalin",
-      "candidateparty": "M. K. Stalin",
-      "age": 60,
-      "education": "graduate",
-      "networth2016": "5 crore",
-      "networth2021": "5 crore",
-      "liabilities": "5 crore",
-      "criminalcases": 5
+      "constno": 221,
+      "constname": "Gopiballavpur",
+      "totalElectorate": 123333333,
+      "turnout2016": 85.9,
+      "turnout2021": 60,
+      "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 12,
-      "constname": "Kallakurichi",
-      "candidatename": "Vijayakanth",
-      "candidateparty": "Desiya Murpokku Dravida Kazhagam",
-      "age": 60,
-      "education": "graduate",
-      "networth2016": "6 crore",
-      "networth2021": "6 crore",
-      "liabilities": "6 crore",
-      "criminalcases": 6
+      "constno": 222,
+      "constname": "Jhargram",
+      "totalElectorate": 123333333,
+      "turnout2016": 82.3,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 3,
-      "constname": "Chennai",
-      "candidatename": "Senthamizhan Seeman",
-      "candidateparty": "Naam Tamilar Katchi",
-      "age": 40,
-      "education": "graduate",
-      "networth2016": "7 crore",
-      "networth2021": "7 crore",
-      "liabilities": "7 crore",
-      "criminalcases": 3
+      "constno": 241,
+      "constname": "Joypur",
+      "totalElectorate": 123333333,
+      "turnout2016": 80.8,
+      "turnout2021": 64,
+      "timeupdated": "7.00pm"
     },
     {
       "phase": "I",
-      "constno": 12,
-      "constname": "Kallakurichi",
-      "candidatename": "Karupusamy Selvam",
-      "candidateparty": "Naam Tamilar Katchi",
-      "age": 35,
-      "education": "graduate",
-      "networth2016": "8 crore",
-      "networth2021": "8 crore",
-      "liabilities": "8 crore",
-      "criminalcases": 2
+      "constno": 216,
+      "constname": "Kanthi Dakshin",
+      "totalElectorate": 123333333,
+      "turnout2016": 84.3,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 213,
+      "constname": "Kanthi Uttar",
+      "totalElectorate": 123333333,
+      "turnout2016": 87.5,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 244,
+      "constname": "Kashipur",
+      "totalElectorate": 123333333,
+      "turnout2016": 81.9,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 223,
+      "constname": "Keshiary",
+      "totalElectorate": 123333333,
+      "turnout2016": 88,
+      "turnout2021": 56,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 228,
+      "constname": "Kharagpur",
+      "totalElectorate": 123333333,
+      "turnout2016": 87.8,
+      "turnout2021": 60,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 215,
+      "constname": "Khejuri",
+      "totalElectorate": 123333333,
+      "turnout2016": 88.8,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 243,
+      "constname": "Manbazar",
+      "totalElectorate": 123333333,
+      "turnout2016": 83,
+      "turnout2021": 64,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 236,
+      "constname": "Medinipur",
+      "totalElectorate": 123333333,
+      "turnout2016": 83.6,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 220,
+      "constname": "Nayagram",
+      "totalElectorate": 123333333,
+      "turnout2016": 83.5,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 245,
+      "constname": "Para",
+      "totalElectorate": 123333333,
+      "turnout2016": 80.4,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 212,
+      "constname": "Patashpur",
+      "totalElectorate": 123333333,
+      "turnout2016": 88.6,
+      "turnout2021": 56,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 242,
+      "constname": "Purulia",
+      "totalElectorate": 123333333,
+      "turnout2016": 79.2,
+      "turnout2021": 60,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 246,
+      "constname": "Raghunathpur",
+      "totalElectorate": 123333333,
+      "turnout2016": 80.3,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 250,
+      "constname": "Raipur",
+      "totalElectorate": 123333333,
+      "turnout2016": 85.2,
+      "turnout2021": 64,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 217,
+      "constname": "Ramnagar",
+      "totalElectorate": 123333333,
+      "turnout2016": 83.9,
+      "turnout2021": 39,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 249,
+      "constname": "Ranibandh",
+      "totalElectorate": 123333333,
+      "turnout2016": 82.2,
+      "turnout2021": 78,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 234,
+      "constname": "Salboni",
+      "totalElectorate": 123333333,
+      "turnout2016": 89.5,
+      "turnout2021": 50,
+      "timeupdated": "7.00pm"
+    },
+    {
+      "phase": "I",
+      "constno": 247,
+      "constname": "Saltora",
+      "totalElectorate": 123333333,
+      "turnout2016": 84.2,
+      "turnout2021": 56,
+      "timeupdated": "7.00pm"
     }
   ]
 

@@ -2683,6 +2683,99 @@
       "turnout2021": 56,
       "timeupdated": "7.00pm"
     }
+  ],
+  "wb-keycandidate": [
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Chennai",
+      "candidatename": "Edappadi Karuppa Palaniswami",
+      "candidateparty": "AIADMK",
+      "age": 50,
+      "education": "graduate",
+      "networth2016": "2 crore",
+      "networth2021": "2 crore",
+      "liabilities": "2 crore",
+      "criminalcases": 2
+    },
+    {
+      "phase": "I",
+      "constno": 3,
+      "constname": "Chennai",
+      "candidatename": "Ottakarathevar Panneerselvam",
+      "candidateparty": "AIADMK",
+      "age": 40,
+      "education": "graduate",
+      "networth2016": "3 crore",
+      "networth2021": "3 crore",
+      "liabilities": "3 crore",
+      "criminalcases": 10
+    },
+    {
+      "phase": "I",
+      "constno": 5,
+      "constname": "Madurai",
+      "candidatename": "T. T. V. Dhinakaran",
+      "candidateparty": "Amma Makkal Munnettra Kazagam",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "4 crore",
+      "networth2021": "4 crore",
+      "liabilities": "4 crore",
+      "criminalcases": 3
+    },
+    {
+      "phase": "I",
+      "constno": 6,
+      "constname": "Trichy",
+      "candidatename": "M. K. Stalin",
+      "candidateparty": "M. K. Stalin",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "5 crore",
+      "networth2021": "5 crore",
+      "liabilities": "5 crore",
+      "criminalcases": 5
+    },
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Kallakurichi",
+      "candidatename": "Vijayakanth",
+      "candidateparty": "Desiya Murpokku Dravida Kazhagam",
+      "age": 60,
+      "education": "graduate",
+      "networth2016": "6 crore",
+      "networth2021": "6 crore",
+      "liabilities": "6 crore",
+      "criminalcases": 6
+    },
+    {
+      "phase": "I",
+      "constno": 3,
+      "constname": "Chennai",
+      "candidatename": "Senthamizhan Seeman",
+      "candidateparty": "Naam Tamilar Katchi",
+      "age": 40,
+      "education": "graduate",
+      "networth2016": "7 crore",
+      "networth2021": "7 crore",
+      "liabilities": "7 crore",
+      "criminalcases": 3
+    },
+    {
+      "phase": "I",
+      "constno": 12,
+      "constname": "Kallakurichi",
+      "candidatename": "Karupusamy Selvam",
+      "candidateparty": "Naam Tamilar Katchi",
+      "age": 35,
+      "education": "graduate",
+      "networth2016": "8 crore",
+      "networth2021": "8 crore",
+      "liabilities": "8 crore",
+      "criminalcases": 2
+    }
   ]
 
 

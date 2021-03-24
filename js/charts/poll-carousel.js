@@ -1,5 +1,5 @@
-function pollcarouselWidget(datasource, selector){
-
+function pollcarouselWidget(datasource, selector,filter){
+	var filter_const = filter;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],
@@ -14,19 +14,25 @@ function pollcarouselWidget(datasource, selector){
     });
     
     function customDataSuccess(data){
-
         var myColor = d3.scaleSequential()
             .domain([0, 100])
             .interpolator(d3.interpolateYlGn);
 
 
         var content = "";
-        for(var i in data["wb-polling-day"]){
+		var matchingletter;
+        for(var i in data["wb_poll_data"]){
+			var constname = data["wb_poll_data"][i]["constname"];
+            var turnout2021 = data["wb_poll_data"][i]["turnout2021"];
+            var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
+            var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; console.log(filter_const);
+            if(filter_const != "wb-polling-day" && filter_const != '') { console.log('here');
+				var matchingletter = constname.charAt(0).toUpperCase();
+				if(matchingletter != filter_const) {
+					continue;
+				}
+			}
             
-            var constname = data["wb-polling-day"][i]["constname"];
-            var turnout2021 = data["wb-polling-day"][i]["turnout2021"];
-            var turnout2016 = data["wb-polling-day"][i]["turnout2016"];
-            var totalElectorate = data["wb-polling-day"][i]["totalElectorate"];
 
             html = '<div class="turnout-items">'
             html += '<h3> '+constname+'  <span class="turnout-update">Updated 11.20pm</span> </h3>'
@@ -56,6 +62,7 @@ function pollcarouselWidget(datasource, selector){
             html +=  '</div>'
 
             content += html
+			//break;
         }
         $("#poll-carous1").html(content);
     }

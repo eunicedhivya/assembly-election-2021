@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    
 </head>
 <body>
     <div class="tf_wrap pollDash-wrap">
@@ -30,7 +31,7 @@
                 <li class="clickable"><a href="javascript:void(0)">C</a></li>
                 <li class="clickable"><a href="javascript:void(0)">D</a></li>
                 <li class="clickable"><a href="javascript:void(0)">E</a></li>
-                <li class="clickable active"><a href="javascript:void(0)">F</a></li>
+                <li class="clickable"><a href="javascript:void(0)">F</a></li>
                 <li class="clickable"><a href="javascript:void(0)">G</a></li>
                 <li class="clickable"><a href="javascript:void(0)">H</a></li>
                 <li class="clickable"><a href="javascript:void(0)">I</a></li>
@@ -55,6 +56,7 @@
         </div>
         <section class="const-carousel">
             <div id="poll-carous1" class="owl-carousel"> </div>
+            <!-- <div id="filter-carous"  class="hide"></div> -->
         </section>
         <header class="dash-header">
             <h2>Candidate Watch</span></h2>
@@ -73,8 +75,10 @@
     <script src="js/owl.carousel.js"></script>
     <script src="js/d3-parliament.js"></script>
     <script src="js/charts/poll-carousel.js"></script>
+    <!-- <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script> -->
+    <script src="js/charts/filter.js"></script>
     <script type="text/javascript">
-        pollcarouselWidget('data.json', "#poll-carous1", "wb-polling-day")
+        pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb-polling-day")
         jQuery("ul#letters-listing li.clickable").click(function() {
             $('ul#letters-listing li').removeClass('active');
             $(this).addClass('active');

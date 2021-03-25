@@ -618,7 +618,7 @@ ul#letters-listing li.disabled a {
   position: relative;
 }
 .poll-candidate-items img {
-  max-width: 80px;
+  max-width: 95px;
   position: absolute;
   bottom: 0;
   left: 12px;

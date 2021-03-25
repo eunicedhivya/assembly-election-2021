@@ -1,5 +1,6 @@
-function pollcarouselWidget(datasource, selector, filter){
+function pollcarouselWidget(datasource, selector, filter, statename){
 	var filter_const = filter;
+	var state_data = statename;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],
@@ -27,12 +28,14 @@ function pollcarouselWidget(datasource, selector, filter){
             var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
             var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; console.log(filter_const);
             
-            if(filter_const != "wb-polling-day" && filter_const != '') { 
-                console.log('here');
+            if((filter_const != "wb_poll_data") ) { 
+                if(filter_const != ''){
+                    console.log('here');
 				var matchingletter = constname.charAt(0).toUpperCase();
 				if(matchingletter != filter_const) {
 					continue;
 				}
+                }
 			}
             
 
@@ -100,7 +103,7 @@ function pollcarouselWidget(datasource, selector, filter){
                     var keycriminals = data["wb-keycandidate"][j].criminalcases
 
                     html = '<div class="poll-candidate-items">'
-                    html += '<img src="img/profile.png" alt="">'
+                    html += '<img src="img/wb-keycandidates/'+keycandidatename.replace(/\s/g, "")+'.png" alt="">'
                     html += '<div class="cand-info">'
                     html += '<h4>'+keycandidatename+'<span class="keycand-age"> ('+keycandidateage+') </span>'+'<span>'+keycandidateparty+'</span></h4>'
                     html += '<p class="cand-cont">'+keyconstname+'</p>'

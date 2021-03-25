@@ -624,9 +624,9 @@ ul#letters-listing li.disabled a {
   left: 12px;
 }
 .poll-candidate-items .cand-info {
-  width: 72%;
-  margin: 0 0 0 28%;
-  padding: 10px 15px;
+  width: 70%;
+  margin: 0 0 0 30%;
+  padding: 10px 10px;
   box-sizing: border-box;
 }
 
@@ -681,7 +681,7 @@ ul#letters-listing li.disabled a {
   font-family: "Rubik", sans-serif;
   font-size: 11px;
   font-weight: 400;
-  margin: 5px 0;
+  margin: 1px 0;
   color: red;
 }
 .poll-candidate-items .cand-meta {
@@ -714,7 +714,8 @@ ul#letters-listing li.disabled a {
 }
 .poll-candidate-items .cand-meta li span {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 13px;
   font-weight: 500;
   color: #000;
   margin-top: 5px;

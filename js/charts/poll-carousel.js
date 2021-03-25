@@ -82,7 +82,7 @@ function pollcarouselWidget(datasource, selector, filter, statename){
         pagination: true,
         navigation : true,
         navigationText : ['<i class="arrow left"></i>','<i class="arrow right"></i>'],
-        jsonPath : 'data.json',
+        jsonPath : 'keycandidate-data.json',
         jsonSuccess : customDataSuccess1
     });
 

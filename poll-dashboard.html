@@ -26,32 +26,32 @@
         </header>
         <div id="alphabetfilters">
             <ul id="letters-listing">
-                <li class="clickable"><a href="javascript:void(0)">A</a></li>
-                <li class="clickable"><a href="javascript:void(0)">B</a></li>
-                <li class="clickable"><a href="javascript:void(0)">C</a></li>
-                <li class="clickable"><a href="javascript:void(0)">D</a></li>
-                <li class="clickable"><a href="javascript:void(0)">E</a></li>
-                <li class="clickable"><a href="javascript:void(0)">F</a></li>
-                <li class="clickable"><a href="javascript:void(0)">G</a></li>
-                <li class="clickable"><a href="javascript:void(0)">H</a></li>
-                <li class="clickable"><a href="javascript:void(0)">I</a></li>
-                <li class="clickable"><a href="javascript:void(0);">J</a></li>
-                <li class="clickable"><a href="javascript:void(0);">K</a></li>
-                <li class="clickable"><a href="javascript:void(0);">L</a></li>
-                <li class="clickable"><a href="javascript:void(0)">M</a></li>
-                <li class="clickable"><a href="javascript:void(0)">N</a></li>
-                <li class="clickable"><a href="javascript:void(0)">O</a></li>
-                <li class="clickable"><a href="javascript:void(0)">P</a></li>
-                <li class="clickable"><a href="javascript:void(0);">Q</a></li>
-                <li class="clickable"><a href="javascript:void(0)">R</a></li>
-                <li class="clickable"><a href="javascript:void(0)">S</a></li>
-                <li class="clickable"><a href="javascript:void(0)">T</a></li>
-                <li class="clickable"><a href="javascript:void(0)">U</a></li>
-                <li class="clickable"><a href="javascript:void(0)">V</a></li>
-                <li class="clickable"><a href="javascript:void(0)">W</a></li>
-                <li class="clickable"><a href="javascript:void(0);">X</a></li>
-                <li class="clickable"><a href="javascript:void(0);">Y</a></li>
-                <li class="clickable"><a href="javascript:void(0)">Z</a></li>
+                <li id="a" class="clickable"><a href="javascript:void(0)">A</a></li>
+                <li id="b" class="clickable"><a href="javascript:void(0)">B</a></li>
+                <li id="c" class="clickable"><a href="javascript:void(0)">C</a></li>
+                <li id="d" class="clickable"><a href="javascript:void(0)">D</a></li>
+                <li id="e" class="clickable"><a href="javascript:void(0)">E</a></li>
+                <li id="f" class="clickable"><a href="javascript:void(0)">F</a></li>
+                <li id="g" class="clickable"><a href="javascript:void(0)">G</a></li>
+                <li id="h" class="clickable"><a href="javascript:void(0)">H</a></li>
+                <li id="i" class="clickable"><a href="javascript:void(0)">I</a></li>
+                <li id="j" class="clickable"><a href="javascript:void(0);">J</a></li>
+                <li id="k" class="clickable"><a href="javascript:void(0);">K</a></li>
+                <li id="l" class="clickable"><a href="javascript:void(0);">L</a></li>
+                <li id="m" class="clickable"><a href="javascript:void(0)">M</a></li>
+                <li id="n" class="clickable"><a href="javascript:void(0)">N</a></li>
+                <li id="o" class="clickable"><a href="javascript:void(0)">O</a></li>
+                <li id="p" class="clickable"><a href="javascript:void(0)">P</a></li>
+                <li id="q" class="clickable"><a href="javascript:void(0);">Q</a></li>
+                <li id="r"class="clickable"><a  href="javascript:void(0)">R</a></li>
+                <li id="s" class="clickable"><a href="javascript:void(0)">S</a></li>
+                <li id="t" class="clickable"><a href="javascript:void(0)">T</a></li>
+                <li id="u" class="clickable"><a href="javascript:void(0)">U</a></li>
+                <li id="v" class="clickable"><a href="javascript:void(0)">V</a></li>
+                <li id="w" class="clickable"><a href="javascript:void(0)">W</a></li>
+                <li id="x" class="clickable"><a href="javascript:void(0);">X</a></li>
+                <li id="y" class="clickable"><a href="javascript:void(0);">Y</a></li>
+                <li id="z" class="clickable"><a href="javascript:void(0)">Z</a></li>
             </ul>
         </div>
         <section class="const-carousel">
@@ -80,9 +80,18 @@
     <script type="text/javascript">
         pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb_poll_data")
         jQuery("ul#letters-listing li.clickable").click(function() {
+
             $('ul#letters-listing li').removeClass('active');
             $(this).addClass('active');
         })
+
+        var disable_list_wb = ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"]
+
+        for(var t=0; t<disable_list_wb.length; t++){
+            console.log(disable_list_wb[t].toLowerCase());
+            $("#"+disable_list_wb[t].toLowerCase()).css("pointer-events", "none")
+            $("#"+disable_list_wb[t].toLowerCase()).css("opacity", "0.3")
+        }
     </script>
 
 </body>

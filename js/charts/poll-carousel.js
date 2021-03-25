@@ -15,18 +15,24 @@ function pollcarouselWidget(datasource, selector, filter, statename){
     });
     
     function customDataSuccess(data){
-        var myColor = d3.scaleSequential()
-            .domain([0, 100])
-            .interpolator(d3.interpolateYlGn);
+        var myColor =  d3.scaleLinear()
+        .domain([1, 100])
+        .interpolate(d3.interpolateHcl)
+        .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
+        // var myColor = d3.scaleSequential()
+        //     .domain([0, 100])
+        //     .interpolator(d3.interpolateYlGn);
 
 
         var content = "";
 		var matchingletter;
         for(var i in data["wb_poll_data"]){
+            console.log(filter_const);
 			var constname = data["wb_poll_data"][i]["constname"];
             var turnout2021 = data["wb_poll_data"][i]["turnout2021"];
             var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
-            var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; console.log(filter_const);
+            var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; 
+            var timeupdate = data["wb_poll_data"][i]["timeupdated"];
             
             if((filter_const != "wb_poll_data") ) { 
                 if(filter_const != ''){
@@ -40,7 +46,7 @@ function pollcarouselWidget(datasource, selector, filter, statename){
             
 
             html = '<div class="turnout-items">'
-            html += '<h3> '+constname+'  <span class="turnout-update">Updated 11.20pm</span> </h3>'
+            html += '<h3> '+constname+'  <span class="turnout-update">Updated <b>'+timeupdate+'</b></span> </h3>'
             html += '<div class="turnout-content">'
             html += '<div class="battery-chart turnout-2021">'
             html += '<div class="bar">'
@@ -51,7 +57,7 @@ function pollcarouselWidget(datasource, selector, filter, statename){
             html +=  '<div class="split-2">'
             html +=  '<div>'
             html +=  'Total electorate' 
-            html +=  ' <span>'+totalElectorate.toLocaleString('en-IN')+'</span>'
+            html +=  ' <span class="totelectorate">'+totalElectorate.toLocaleString('en-IN')+'</span>'
             html +=  '</div>'
             html +=  '<div>'
             html +=  '<h4>Turnout 2016</h4>'

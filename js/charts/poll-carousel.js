@@ -1,4 +1,4 @@
-function pollcarouselWidget(datasource, selector,filter){
+function pollcarouselWidget(datasource, selector, filter){
 	var filter_const = filter;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
@@ -26,7 +26,9 @@ function pollcarouselWidget(datasource, selector,filter){
             var turnout2021 = data["wb_poll_data"][i]["turnout2021"];
             var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
             var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; console.log(filter_const);
-            if(filter_const != "wb-polling-day" && filter_const != '') { console.log('here');
+            
+            if(filter_const != "wb-polling-day" && filter_const != '') { 
+                console.log('here');
 				var matchingletter = constname.charAt(0).toUpperCase();
 				if(matchingletter != filter_const) {
 					continue;

@@ -35,7 +35,7 @@ jQuery(document).ready(function(){
     var alphabetswise = {};
      $(".dashfilters").click(function(){
         $('ul#letters-listing li').removeClass('active');
-        $('ul#letters-listing li').css("pointer-events", "visible")
+        $('ul#letters-listing li').css("pointer-events", "auto")
         $('ul#letters-listing li').css("opacity", "1")
 
 	   find_let = $(this).attr('data');

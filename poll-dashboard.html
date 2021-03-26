@@ -77,7 +77,7 @@
     <!-- <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script> -->
     <script src="js/charts/filter.js"></script>
     <script type="text/javascript">
-        pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb_poll_data", "wb_poll_data")
+        pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb_poll_data", "")
         jQuery("ul#letters-listing li.clickable").click(function() {
 
             $('ul#letters-listing li').removeClass('active');
@@ -92,7 +92,7 @@
         var disable_list_wb = ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"]
 
         for(var t=0; t<disable_list_wb.length; t++){
-            console.log(disable_list_wb[t].toLowerCase());
+            // console.log(disable_list_wb[t].toLowerCase());
             $("#"+disable_list_wb[t].toLowerCase()).css("pointer-events", "none")
             $("#"+disable_list_wb[t].toLowerCase()).css("opacity", "0.3")
         }

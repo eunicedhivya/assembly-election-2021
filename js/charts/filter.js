@@ -22,35 +22,40 @@ jQuery(document).ready(function(){
         return turnout_carous;
      })();
 
-    wb_data = all_data["wb_poll_data"]
-    as_data = all_data["as_poll_data"]
-    kl_data = all_data["kl_poll_data"]
-    pd_data = all_data["pd_poll_data"]
-    tn_data = all_data["tn_poll_data"]
+    // wb_data = all_data["wb_poll_data"]
+    // as_data = all_data["as_poll_data"]
+    // kl_data = all_data["kl_poll_data"]
+    // pd_data = all_data["pd_poll_data"]
+    // tn_data = all_data["tn_poll_data"]
 
-     console.log("all", all_data)
-     console.log("wb", wb_data)
-     console.log("as", as_data)
-     console.log("kl", kl_data)
-     console.log("tn", tn_data)
-     console.log("pd", pd_data)
+    //  console.log("all", all_data)
+    //  console.log("wb", wb_data)
+    //  console.log("as", as_data)
+    //  console.log("kl", kl_data)
+    //  console.log("tn", tn_data)
+    //  console.log("pd", pd_data)
     
-    var l = turnout_carous.length, find_let, find_state, set_state = "wb";
+    var l = turnout_carous.length, find_let, find_state, get_state = "wb";
     var alphabetswise = {};
    $("#letters-listing li.clickable").click(function(){
 	   find_let = $(this).text();
-       console.log("find_state", find_state)
+    //    console.log("find_state", find_state)
        console.log("find_let", find_let)
+        set_state = get_state+"_poll_data";
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_let, find_state);
+	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", set_state, find_let);
    });
 
    $(".dashfilters").click(function(){
+
+    $('.dashfilters').removeClass('active');
+    $(this).addClass('active');
     get_state = $(this).data().state;
-    set_state = get_state+"_poll_data"
-    console.log("find_state", set_state)
+    set_state = get_state+"_poll_data";
+    // console.log("find_state", find_state)
+    // console.log("find_state", set_state)
     $("#poll-carous1").html('Loading...');
-    pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_state, set_state);
+    pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", set_state,"");
 });
    
     // $("#letters-listing1 li.clickable").click(function(){

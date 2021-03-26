@@ -1,5 +1,6 @@
-function pollcarouselWidget(datasource, selector, filter, statefilter){
-	var filter_const = filter;
+function pollcarouselWidget(datasource, selector, statefilter, alphafilter){
+    console.log("function running");
+	var filter_const = alphafilter;
 	// var state_data = statename;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
@@ -31,15 +32,27 @@ function pollcarouselWidget(datasource, selector, filter, statefilter){
             var totalElectorate = data[statefilter][i]["totalElectorate"]; 
             var timeupdate = data[statefilter][i]["timeupdated"];
             
-            if(statefilter != "wb_poll_data" && statefilter != "as_poll_data"  && statefilter != "kl_poll_data"  && statefilter != "tn_poll_data"  && statefilter != "pd_poll_data") { 
-                if(filter_const != ''){
-                    console.log('here');
-				var matchingletter = constname.charAt(0).toUpperCase();
-				if(matchingletter != filter_const) {
-					continue;
-				}
+            var matchingletter = constname.charAt(0).toUpperCase();
+
+            if(filter_const != ''){
+                console.log('here');
+                var matchingletter = constname.charAt(0).toUpperCase();
+                console.log(matchingletter);
+                if(matchingletter != filter_const) {
+                    continue;
                 }
-			}
+            }
+            
+            // if(statefilter != "wb_poll_data" && statefilter != "as_poll_data"  && statefilter != "kl_poll_data"  && statefilter != "tn_poll_data"  && statefilter != "pd_poll_data") { 
+            //     if(filter_const != ''){
+            //         console.log('here');
+            //         var matchingletter = constname.charAt(0).toUpperCase();
+            //         console.log(matchingletter);
+            //         // if(matchingletter != filter_const) {
+            //         //     continue;
+            //         // }
+            //     }
+			// }
             
 
             html = '<div class="turnout-items">'

@@ -18,9 +18,9 @@
             <nav>
                 <button class="dashfilters active" data="wb">West Bengal</button>
                 <button class="dashfilters" data="as">Assam</button>
-                <button class="dashfilters" data="tn" style="display: none;">Tamil Nadu</button>
-                <button class="dashfilters" data="kl" style="display: none;">Kerala</button>
-                <button class="dashfilters" data="pu" style="display: none;">Puducherry</button>
+                <button class="dashfilters disabled" data="tn">Tamil Nadu</button>
+                <button class="dashfilters disabled" data="kl">Kerala</button>
+                <button class="dashfilters disabled" data="pu">Puducherry</button>
             </nav>
         </header>
         <div id="alphabetfilters">
@@ -98,7 +98,7 @@
         }
 
         for(var t=0; t<disable_list["wb"].length; t++){
-            console.log(disable_list["wb"][t].toLowerCase());
+            // console.log(disable_list["wb"][t].toLowerCase());
             $("#"+disable_list["wb"][t].toLowerCase()).css("pointer-events", "none")
             $("#"+disable_list["wb"][t].toLowerCase()).css("opacity", "0.3")
         }

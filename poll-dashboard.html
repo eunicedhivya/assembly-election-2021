@@ -16,12 +16,11 @@
         <header class="dash-header">
             <h2>Assembly Elections <span>Voter Turnout</span></h2>
             <nav>
-                <button class="dashfilters active">West Bengal</button>
-                <button class="dashfilters">Tamil Nadu</button>
-                <button class="dashfilters">Kerala</button>
-                <button class="dashfilters">Assam</button>
-                <button class="dashfilters">Assam</button>
-                <button class="dashfilters">Puducherry</button>
+                <button class="dashfilters active" data-state="wb">West Bengal</button>
+                <button class="dashfilters" data-state="as">Assam</button>
+                <button class="dashfilters" data-state="tn">Tamil Nadu</button>
+                <button class="dashfilters" data-state="kl">Kerala</button>
+                <button class="dashfilters" data-state="as">Puducherry</button>
             </nav>
         </header>
         <div id="alphabetfilters">
@@ -78,7 +77,12 @@
     <!-- <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script> -->
     <script src="js/charts/filter.js"></script>
     <script type="text/javascript">
-        pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb_poll_data")
+        pollcarouselWidget('https://script.google.com/macros/s/AKfycbyrLXRpvqVrb9agAouGs3Ebj0iUDobnAOIOb_vdsyiR7TPk8OLGIU9-98Yq-OpPL1JqyQ/exec', "#poll-carous1", "wb_poll_data", "wb_poll_data")
+        jQuery("ul#letters-listing li.clickable").click(function() {
+
+            $('ul#letters-listing li').removeClass('active');
+            $(this).addClass('active');
+        })
         jQuery("ul#letters-listing li.clickable").click(function() {
 
             $('ul#letters-listing li').removeClass('active');

@@ -1,6 +1,6 @@
-function pollcarouselWidget(datasource, selector, filter, statename){
+function pollcarouselWidget(datasource, selector, filter, statefilter){
 	var filter_const = filter;
-	var state_data = statename;
+	// var state_data = statename;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],
@@ -19,22 +19,19 @@ function pollcarouselWidget(datasource, selector, filter, statename){
         .domain([1, 100])
         .interpolate(d3.interpolateHcl)
         .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
-        // var myColor = d3.scaleSequential()
-        //     .domain([0, 100])
-        //     .interpolator(d3.interpolateYlGn);
 
 
         var content = "";
 		var matchingletter;
-        for(var i in data["wb_poll_data"]){
+        for(var i in data[statefilter]){
             console.log(filter_const);
-			var constname = data["wb_poll_data"][i]["constname"];
-            var turnout2021 = data["wb_poll_data"][i]["turnout2021"];
-            var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
-            var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; 
-            var timeupdate = data["wb_poll_data"][i]["timeupdated"];
+			var constname = data[statefilter][i]["constname"];
+            var turnout2021 = data[statefilter][i]["turnout2021"];
+            var turnout2016 = data[statefilter][i]["turnout2016"];
+            var totalElectorate = data[statefilter][i]["totalElectorate"]; 
+            var timeupdate = data[statefilter][i]["timeupdated"];
             
-            if((filter_const != "wb_poll_data") ) { 
+            if(statefilter != "wb_poll_data" && statefilter != "as_poll_data"  && statefilter != "kl_poll_data"  && statefilter != "tn_poll_data"  && statefilter != "pd_poll_data") { 
                 if(filter_const != ''){
                     console.log('here');
 				var matchingletter = constname.charAt(0).toUpperCase();

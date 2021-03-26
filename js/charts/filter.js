@@ -35,14 +35,24 @@ jQuery(document).ready(function(){
      console.log("tn", tn_data)
      console.log("pd", pd_data)
     
-    var l = turnout_carous.length, find_let;
+    var l = turnout_carous.length, find_let, find_state, set_state = "wb";
     var alphabetswise = {};
    $("#letters-listing li.clickable").click(function(){
 	   find_let = $(this).text();
+       console.log("find_state", find_state)
        console.log("find_let", find_let)
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_let);
+	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_let, find_state);
    });
+
+   $(".dashfilters").click(function(){
+    get_state = $(this).data().state;
+    set_state = get_state+"_poll_data"
+    console.log("find_state", set_state)
+    $("#poll-carous1").html('Loading...');
+    pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_state, set_state);
+});
+   
     // $("#letters-listing1 li.clickable").click(function(){
     //     var termli = {};
     //     find_let = $(this).text();

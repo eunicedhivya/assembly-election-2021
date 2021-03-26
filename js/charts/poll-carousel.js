@@ -1,5 +1,10 @@
-function pollcarouselWidget(datasource, selector,filter){
+
+function pollcarouselWidget(datasource, selector, filter = '', statename){
+	statename = typeof statename !== 'undefined' ? statename : 'wb';
+	statename_fixed = statename;
+	filter = typeof filter !== 'undefined' ? filter : '';
 	var filter_const = filter;
+	var state_data = statename;
     $("#poll-carous1").owlCarousel({
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],
@@ -21,17 +26,24 @@ function pollcarouselWidget(datasource, selector,filter){
 
         var content = "";
 		var matchingletter;
-        for(var i in data["wb_poll_data"]){
-			var constname = data["wb_poll_data"][i]["constname"];
-            var turnout2021 = data["wb_poll_data"][i]["turnout2021"];
-            var turnout2016 = data["wb_poll_data"][i]["turnout2016"];
-            var totalElectorate = data["wb_poll_data"][i]["totalElectorate"]; console.log(filter_const);
-            if(filter_const != "wb-polling-day" && filter_const != '') { console.log('here');
+		var statn = statename+"_poll_data"; 
+        // console.log("Statename:"+statename);
+        for(var i in data[statn]){
+			var constname = data[statn][i]["constname"];
+            var turnout2021 = data[statn][i]["turnout2021"];
+            var turnout2016 = data[statn][i]["turnout2016"];
+            var totalElectorate = data[statn][i]["totalElectorate"];
+            //  console.log(filter_const);
+            
+            //if((filter_const != "wb_poll_data") ) { 
+                if(filter_const != ''){
+                    console.log('here');
 				var matchingletter = constname.charAt(0).toUpperCase();
 				if(matchingletter != filter_const) {
 					continue;
 				}
-			}
+                }
+			//}
             
 
             html = '<div class="turnout-items">'
@@ -77,28 +89,30 @@ function pollcarouselWidget(datasource, selector,filter){
         pagination: true,
         navigation : true,
         navigationText : ['<i class="arrow left"></i>','<i class="arrow right"></i>'],
-        jsonPath : 'data.json',
+        jsonPath : 'keycandidate-data.json',
         jsonSuccess : customDataSuccess1
     });
 
     function customDataSuccess1(data) {
             var cand = "";
-                for(var j in data["wb-keycandidate"]){
+            var statn = statename+"-keycandidate"; 
+            // console.log("Statename:"+statename);
+                for(var j in data[statn]){
                     
-                    var phase = data["wb-keycandidate"][j].phase;
-                    var keyconstno = data["wb-keycandidate"][j].constno;
-                    var keyconstname = data["wb-keycandidate"][j].constname;
-                    var keycandidatename = data["wb-keycandidate"][j].candidatename;
-                    var keycandidateparty = data["wb-keycandidate"][j].candidateparty
-                    var keycandidateage = data["wb-keycandidate"][j].age
-                    var keycandidateedu = data["wb-keycandidate"][j].education
-                    var keycandidatenet2016 = data["wb-keycandidate"][j].networth2016
-                    var keycandidatenet2021 = data["wb-keycandidate"][j].networth2021
-                    var keyliabilities = data["wb-keycandidate"][j].liabilities
-                    var keycriminals = data["wb-keycandidate"][j].criminalcases
+                    var phase = data[statn][j].phase;
+                    var keyconstno = data[statn][j].constno;
+                    var keyconstname = data[statn][j].constname;
+                    var keycandidatename = data[statn][j].candidatename;
+                    var keycandidateparty = data[statn][j].candidateparty
+                    var keycandidateage = data[statn][j].age
+                    var keycandidateedu = data[statn][j].education
+                    var keycandidatenet2016 = data[statn][j].networth2016
+                    var keycandidatenet2021 = data[statn][j].networth2021
+                    var keyliabilities = data[statn][j].liabilities
+                    var keycriminals = data[statn][j].criminalcases
 
                     html = '<div class="poll-candidate-items">'
-                    html += '<img src="img/profile.png" alt="">'
+                    html += '<img src="img/'+statename+"-keycandidates/"+keycandidatename.replace(/\s/g, "")+'.png" alt="">'
                     html += '<div class="cand-info">'
                     html += '<h4>'+keycandidatename+'<span class="keycand-age"> ('+keycandidateage+') </span>'+'<span>'+keycandidateparty+'</span></h4>'
                     html += '<p class="cand-cont">'+keyconstname+'</p>'

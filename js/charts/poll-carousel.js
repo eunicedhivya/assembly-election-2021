@@ -33,6 +33,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
             var turnout2021 = data[statn][i]["turnout2021"];
             var turnout2016 = data[statn][i]["turnout2016"];
             var totalElectorate = data[statn][i]["totalElectorate"];
+            var updateTime = data[statn][i]["timeupdated"];
             //  console.log(filter_const);
             
             //if((filter_const != "wb_poll_data") ) { 
@@ -47,7 +48,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
             
 
             html = '<div class="turnout-items">'
-            html += '<h3> '+constname+'  <span class="turnout-update">Updated 11.20pm</span> </h3>'
+            html += '<h3> '+constname+'  <span class="turnout-update">Updated '+updateTime+'</span> </h3>'
             html += '<div class="turnout-content">'
             html += '<div class="battery-chart turnout-2021">'
             html += '<div class="bar">'

@@ -35,18 +35,22 @@ jQuery(document).ready(function(){
     var alphabetswise = {};
      $(".dashfilters").click(function(){
         $('ul#letters-listing li').removeClass('active');
-        
+        $('ul#letters-listing li').css("pointer-events", "cursor")
+        $('ul#letters-listing li').css("opacity", "1")
+
 	   find_let = $(this).attr('data');
     //    console.log("find_let", find_let)
-    $(".clickable").css("pointer-events", "auto")
-        $(".clickable").css("opacity", "1")
-        set_state = get_state+"_poll_data";
-        
-        for(var t=0; t<disable_list[get_state].length; t++){
-            console.log(disable_list[get_state][t].toLowerCase());
-            $("#"+disable_list[get_state][t].toLowerCase()).css("pointer-events", "none")
-            $("#"+disable_list[get_state][t].toLowerCase()).css("opacity", "0.3")
+       var disable_list = {
+            wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
+            as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]
         }
+
+        for(var t=0; t<disable_list[find_let].length; t++){
+            // console.log(disable_list[find_let]);
+            $("#"+disable_list[find_let][t].toLowerCase()).css("pointer-events", "none")
+            $("#"+disable_list[find_let][t].toLowerCase()).css("opacity", "0.3")
+        }
+    
 	   $("#poll-carous1").html('Loading...');
 	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", "",find_let);
    });

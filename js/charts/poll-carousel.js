@@ -38,7 +38,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
             
             //if((filter_const != "wb_poll_data") ) { 
                 if(filter_const != ''){
-                    console.log('here');
+                    // console.log('here');
 				var matchingletter = constname.charAt(0).toUpperCase();
 				if(matchingletter != filter_const) {
 					continue;

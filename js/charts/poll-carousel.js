@@ -19,10 +19,10 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
     });
     
     function customDataSuccess(data){
-        var myColor = d3.scaleSequential()
-            .domain([0, 100])
-            .interpolator(d3.interpolateYlGn);
-
+        var myColor =  d3.scaleLinear()
+            .domain([1, 100])
+            .interpolate(d3.interpolateHcl)
+            .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
 
         var content = "";
 		var matchingletter;

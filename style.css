@@ -45,6 +45,10 @@
   background-color: #000;
   color: #fff;
 }
+.tf_wrap button.dashfilters.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
 .tf_wrap .btn_filter button {
   background-color: #cccc;
   color: #999;

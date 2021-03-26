@@ -181,7 +181,6 @@
   font-size: 11px;
   font-weight: 500;
 }
-
 .contituency-items .leadingcand h4::before{
   content: 'Leading';
   color: #008000;
@@ -618,15 +617,15 @@ ul#letters-listing li.disabled a {
   position: relative;
 }
 .poll-candidate-items img {
-  max-width: 80px;
+  max-width: 95px;
   position: absolute;
   bottom: 0;
   left: 12px;
 }
 .poll-candidate-items .cand-info {
-  width: 72%;
-  margin: 0 0 0 28%;
-  padding: 10px 15px;
+  width: 70%;
+  margin: 0 0 0 30%;
+  padding: 10px 10px;
   box-sizing: border-box;
 }
 
@@ -681,7 +680,7 @@ ul#letters-listing li.disabled a {
   font-family: "Rubik", sans-serif;
   font-size: 11px;
   font-weight: 400;
-  margin: 5px 0;
+  margin: 1px 0;
   color: red;
 }
 .poll-candidate-items .cand-meta {
@@ -714,7 +713,8 @@ ul#letters-listing li.disabled a {
 }
 .poll-candidate-items .cand-meta li span {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 13px;
   font-weight: 500;
   color: #000;
   margin-top: 5px;
@@ -771,7 +771,7 @@ ul#letters-listing li.disabled a {
 }
 .turnout-items .battery-chart {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 85% 15%;
   column-gap: 10px;
 }
 .turnout-items .battery-chart .bar {
@@ -798,10 +798,10 @@ ul#letters-listing li.disabled a {
   grid-template-columns: 65% 35%;
 }
 .turnout-items .turnout-2016 .level {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 15px;
-  color: #cccccc;
-  font-weight: 400;
+  color: #ff0000;
+  font-weight: 500;
 }
 .turnout-items .split-2 {
   display: grid;
@@ -815,14 +815,20 @@ ul#letters-listing li.disabled a {
 }
 .turnout-items .split-2 div span {
   font-weight: 500;
-  color: #cccccc;
+  color: #ff0000;
+  font-size: 18px;
+  line-height: 30px;
+}
+.turnout-items .split-2 div span.totelectorate {
+  font-weight: 500;
+  color: #999999;
   font-size: 18px;
   line-height: 30px;
 }
 .turnout-items .split-2 div h4 {
   font-weight: 500;
   margin: 0 0 5px 0;
-  color: #cccccc;
+  color: #ff0000;
   font-size: 14px;
   line-height: 16px;
 }

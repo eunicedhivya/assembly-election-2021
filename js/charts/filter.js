@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
         $.ajax({
            'async': false,
            'global': false, 
-           'url': 'https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec',
+           'url': 'https://thefederal.com/api/scraper.php?m=Election2021&t=constData',
            'dataType' : 'json',
            'success': function (data) {
                  turnout_carous = data["wb_poll_data"];
@@ -52,13 +52,13 @@ jQuery(document).ready(function(){
         }
     
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", "",find_let);
+	   pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "",find_let);
    });
    $("#letters-listing li.clickable").click(function(){
 	   find_let = $(this).text();
     //    console.log("find_let", find_let)
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbyvz9WiMBlhWSmI7JsuduqkxdEp3J-a_nj4ZGssqSi0v8eCCWw6uYmnFd9553HhqlroOg/exec', "#poll-carous1", find_let,statename_fixed);
+	   pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", find_let,statename_fixed);
    });
    
 });

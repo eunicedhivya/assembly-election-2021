@@ -22,7 +22,8 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
         var myColor =  d3.scaleLinear()
             .domain([1, 100])
             .interpolate(d3.interpolateHcl)
-            .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
+            .range([d3.hcl('#e8484e'), d3.hcl('#adce67')])
+            // .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
 
         var content = "";
 		var matchingletter;

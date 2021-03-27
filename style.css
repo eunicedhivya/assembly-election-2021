@@ -627,7 +627,7 @@ ul#letters-listing li.disabled a {
 }
 
 .poll-candidate-items {
-  width: 97%;
+  width: 90%;
   /* max-width: 375px; */
   height: 135px;
   background-color: #f8f8f8;

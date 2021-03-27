@@ -50,10 +50,10 @@
     margin: 0 auto;
   }
   .turnout-items {
-    width: 97%;
+    width: 90%;
     /* max-width: 310px; */
     margin: 0 auto;
-    height: 165px;
+    height: 140px;
   }
   #poll-carous1 .owl-item {
     margin: 0 auto;

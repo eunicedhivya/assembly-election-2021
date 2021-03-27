@@ -1,12 +1,20 @@
 @media screen and (max-width: 767px) {
+    .tf_wrap .dash-header{
+        align-items: flex-start;
+        flex-direction: column;
+    }
   .tf_wrap .dash-header h2 {
     font-size: 15px;
     margin-right: 10px;
   }
+  .tf_wrap .dash-header h2.poll-mainhead {
+      margin-right: 10px;
+    font-size: 19px;
+    }
   .tf_wrap button.dashfilters {
-    font-size: 8px;
+    font-size: 11px;
     margin: 0 0;
-    padding: 1px 5px;
+    padding: 3px 5px;
     line-height: 13px;
   }
   .contituency-items {
@@ -59,9 +67,9 @@
   .poll-candidate-items .cand-meta li span {
     font-size: 12px;
   }
-  #poll-carous1.owl-carousel .owl-item, #poll-carous2.owl-carousel .owl-item {
-    width: 318px !important;
-  }
+  /*#poll-carous1.owl-carousel .owl-item, #poll-carous2.owl-carousel .owl-item {*/
+  /*  width: auto !important;*/
+  /*}*/
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */
@@ -92,4 +100,10 @@
   .assembly-map {
     margin: 20px 0 0 0;
   }
+  #poll-carous1.owl-carousel .owl-item {
+      width: 360px !important;
+   }
+   #poll-carous2.owl-carousel .owl-item {
+      width: 360px !important;
+    }
 }

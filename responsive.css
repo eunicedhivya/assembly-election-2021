@@ -1,16 +1,16 @@
 @media screen and (max-width: 767px) {
-    .tf_wrap .dash-header{
-        align-items: flex-start;
-        flex-direction: column;
-    }
+  .tf_wrap .dash-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .tf_wrap .dash-header h2 {
     font-size: 15px;
     margin-right: 10px;
   }
   .tf_wrap .dash-header h2.poll-mainhead {
-      margin-right: 10px;
+    margin-right: 10px;
     font-size: 19px;
-    }
+  }
   .tf_wrap button.dashfilters {
     font-size: 11px;
     margin: 0 0;
@@ -50,7 +50,7 @@
     margin: 0 auto;
   }
   .turnout-items {
-    width: 90%;
+    width: 97%;
     /* max-width: 310px; */
     margin: 0 auto;
     height: 165px;
@@ -59,7 +59,8 @@
     margin: 0 auto;
     text-align: left;
   }
-  #poll-carous1.owl-carousel .owl-wrapper-outer::after, #poll-carous2.owl-carousel .owl-wrapper-outer::after {
+  #poll-carous1.owl-carousel .owl-wrapper-outer::after,
+  #poll-carous2.owl-carousel .owl-wrapper-outer::after {
     right: -28px;
     top: -4px;
     width: 30px;
@@ -73,7 +74,6 @@
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */
- 
 }
 @media (min-width: 1000px) {
   .left-map {
@@ -101,9 +101,9 @@
     margin: 20px 0 0 0;
   }
   #poll-carous1.owl-carousel .owl-item {
-      width: 360px !important;
-   }
-   #poll-carous2.owl-carousel .owl-item {
-      width: 360px !important;
-    }
+    width: 360px !important;
+  }
+  #poll-carous2.owl-carousel .owl-item {
+    width: 360px !important;
+  }
 }

@@ -25,6 +25,7 @@
         </header>
         <div id="alphabetfilters">
             <ul id="letters-listing">
+		<li class="reset-filter"><a href="javascript:void(0)"><img src="img/reset-icon.svg" /></a></li>
                 <li id="a" class="clickable"><a href="javascript:void(0)">A</a></li>
                 <li id="b" class="clickable"><a href="javascript:void(0)">B</a></li>
                 <li id="c" class="clickable"><a href="javascript:void(0)">C</a></li>
@@ -94,6 +95,12 @@
             $(this).addClass('active');
         })
 
+	$(".reset-filter").click(function(){
+            $('ul#letters-listing li').removeClass('active');
+            $('nav button').removeClass('active');
+            $('nav button:first-child').addClass('active');
+            pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
+        })
         var disable_list = {
             wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
             as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]

@@ -52,6 +52,11 @@
 .tf_wrap .searchField {
   background-color: #ccc;
   color: #999;
+  border: 1px solid #ccc;
+}
+.tf_wrap button.searchBtn {
+  background-color: #000;
+  color: #ccc;
 }
 .tf_wrap button.dashfilters.active {
   background-color: #f00;

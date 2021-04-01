@@ -38,7 +38,7 @@
   margin-bottom: 0;
 }
 
-.tf_wrap button.dashfilters {
+.tf_wrap button.dashfilters, tf_wrap button.searchBtn {
   background-color: #cccc;
   color: #999;
   border: none;

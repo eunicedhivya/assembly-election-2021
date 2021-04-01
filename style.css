@@ -38,7 +38,7 @@
   margin-bottom: 0;
 }
 
-.tf_wrap button.dashfilters, tf_wrap button.searchBtn {
+.tf_wrap button.dashfilters, .tf_wrap button.searchBtn {
   background-color: #cccc;
   color: #999;
   border: none;
@@ -48,6 +48,10 @@
   padding: 3px 7px;
   line-height: 15px;
   text-transform: uppercase;
+} 
+.tf_wrap .searchField {
+  background-color: #ccc;
+  color: #999;
 }
 .tf_wrap button.dashfilters.active {
   background-color: #f00;

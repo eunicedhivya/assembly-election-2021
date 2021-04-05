@@ -3,6 +3,10 @@
   max-width: 400px;
 }
 
+.barlevel {
+  transition: all 0.5s;
+}
+
 /* svg {
   background-color: red;
 } */

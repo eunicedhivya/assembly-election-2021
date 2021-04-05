@@ -20,9 +20,10 @@
             <nav>
                 <button class="dashfilters active" data="wb">West Bengal </button>
                 <button class="dashfilters" data="as">Assam </button>
-                <button class="dashfilters disabled" data="tn">Tamil Nadu</button>
-                <button class="dashfilters disabled" data="kl">Kerala</button>
-                <button class="dashfilters disabled" data="pu">Puducherry</button>
+                <button class="dashfilters" data="tn">Tamil Nadu</button>
+                <button class="dashfilters" data="kl">Kerala</button>
+                <button class="dashfilters" data="pd">Puducherry</button>
+                <!-- <button class="dashfilters disabled" data="pu">Puducherry</button> -->
             </nav>
         </header>
         <!-- <div id="alphabetfilters">
@@ -70,7 +71,8 @@
                     <h3 id="statename"> <span id="turnout_statename">West Bengal</span>  Updated <span id="updatedTime"></span>4:38pm</span> </h3>
                     <div class="turnout-content">
                         <div class="battery-chart turnout-2021">
-                            <div class="bar"><div class="barlevel" style="width:67.1%;background-color: rgb(203, 169, 57);"></div></div><div class="level" style="color: rgb(203, 169, 57);">67.1%</div></div><div class="split-2"><div>Total electorate <span>2,43,271</span></div><div><h4>Turnout 2016</h4><div class="battery-chart turnout-2016"><div class="bar"><div class="barlevel" style="width:78.9%;background-color: red;"></div></div><div class="level">78.9%</div></div></div></div></div>
+                            <div class="bar"><div class="barlevel" style="width:67.1%;background-color: rgb(203, 169, 57);"></div></div><div class="level" style="color: rgb(203, 169, 57);">67.1%</div></div>
+                            <div class="split-2"><div>Total electorate <span id="statetotalelectorate">2,43,271</span></div><div><h4>Turnout 2016</h4><div class="battery-chart turnout-2016"><div class="bar"><div class="barlevel" style="width:78.9%;background-color: red;"></div></div><div class="level">78.9%</div></div></div></div></div>
                 </div>
             </section>
             <section class="const-carousel">
@@ -97,7 +99,7 @@
     <script src="js/charts/filter.js"></script>
     <!-- <script src="https://thefederal.com/embed/assembly-election-2021/js/charts/filter.js?v=1823"></script> -->
     <script type="text/javascript">
-        pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
+        pollcarouselWidget('https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec', "#poll-carous1", "","wb")
 
 
         

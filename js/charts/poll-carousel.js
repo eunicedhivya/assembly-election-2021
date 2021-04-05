@@ -22,7 +22,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
     function customDataSuccess1(data) {
             var cand = "";
             var statn = statename+"-keycandidate"; 
-            // console.log("Statename:"+statename);
+            console.log("Statename:"+statename);
                 for(var j in data[statn]){
                     
                     var phase = data[statn][j].phase;

@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
         $.ajax({
            'async': false,
            'global': false, 
-           'url': 'https://thefederal.com/api/scraper.php?m=Election2021&t=constData',
+           'url': 'https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec',
            'dataType' : 'json',
            'success': function (data) {
                  turnout_carous = data["wb_poll_data"];
@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
      })();
 
     
-    var l = turnout_carous.length, find_let, get_state = "wb";
+    var find_let, get_state = "wb";
     var alphabetswise = {};
      $(".dashfilters").click(function(){
         $('ul#letters-listing li').removeClass('active');
@@ -30,27 +30,22 @@ jQuery(document).ready(function(){
         console.log("find_let", find_let)
         console.log("all_data", all_data[find_let+"_poll_total"][0])
 
-        $("#turnout_statename").text(all_data[find_let+"_poll_total"][0]["state"])
-    //    console.log("find_let", get_state)
-       var disable_list = {
-            wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
-            as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]
-        }
+        $("#turnout_statename").text(all_data[find_let+"_poll_total"][0]["statename"])
+        $(".turnout-2021 .barlevel").css("width", all_data[find_let+"_poll_total"][0]["totalturnout2021"]+"%")
+        $(".turnout-2016 .barlevel").css("width", all_data[find_let+"_poll_total"][0]["totalturnout2016"]+"%")
+        $(".turnout-2021 .level").text(all_data[find_let+"_poll_total"][0]["totalturnout2021"]+"%")
+        $(".turnout-2016 .level").text(all_data[find_let+"_poll_total"][0]["totalturnout2016"]+"%")
+        $("#statetotalelectorate").text(all_data[find_let+"_poll_total"][0]["totalelectorate"])
 
-        for(var t=0; t<disable_list[find_let].length; t++){
-            // console.log(disable_list[find_let]);
-            $("#"+disable_list[find_let][t].toLowerCase()).css("pointer-events", "none")
-            $("#"+disable_list[find_let][t].toLowerCase()).css("opacity", "0.3")
-        }
     
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "",find_let);
+	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec', "#poll-carous1", "",find_let);
    });
    $("#letters-listing li.clickable").click(function(){
 	   find_let = $(this).text();
     //    console.log("find_let", find_let)
 	   $("#poll-carous1").html('Loading...');
-	   pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", find_let,statename_fixed);
+	   pollcarouselWidget('https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec', "#poll-carous1", find_let,statename_fixed);
    });
    
 });

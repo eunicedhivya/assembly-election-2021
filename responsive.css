@@ -50,9 +50,9 @@
     margin: 0 auto;
   }
   .turnout-items {
-    width: 90%;
+    width: 87%;
     /* max-width: 310px; */
-    margin: 0 auto;
+    margin: 0 auto !important;
     height: 140px;
   }
   #poll-carous1 .owl-item {
@@ -74,6 +74,9 @@
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */
+  .const-carousel {
+    margin-top: 20px;
+  }
 }
 @media (min-width: 1000px) {
   .left-map {

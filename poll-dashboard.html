@@ -26,53 +26,17 @@
                 <!-- <button class="dashfilters disabled" data="pu">Puducherry</button> -->
             </nav>
         </header>
-        <!-- <div id="alphabetfilters">
-            <ul id="letters-listing">
-		        <li class="reset-filter"><a href="javascript:void(0)"><img src="img/reset-icon.svg" /></a></li>
-                <li id="a" class="clickable"><a href="javascript:void(0)">A</a></li>
-                <li id="b" class="clickable"><a href="javascript:void(0)">B</a></li>
-                <li id="c" class="clickable"><a href="javascript:void(0)">C</a></li>
-                <li id="d" class="clickable"><a href="javascript:void(0)">D</a></li>
-                <li id="e" class="clickable"><a href="javascript:void(0)">E</a></li>
-                <li id="f" class="clickable"><a href="javascript:void(0)">F</a></li>
-                <li id="g" class="clickable"><a href="javascript:void(0)">G</a></li>
-                <li id="h" class="clickable"><a href="javascript:void(0)">H</a></li>
-                <li id="i" class="clickable"><a href="javascript:void(0)">I</a></li>
-                <li id="j" class="clickable"><a href="javascript:void(0);">J</a></li>
-                <li id="k" class="clickable"><a href="javascript:void(0);">K</a></li>
-                <li id="l" class="clickable"><a href="javascript:void(0);">L</a></li>
-                <li id="m" class="clickable"><a href="javascript:void(0)">M</a></li>
-                <li id="n" class="clickable"><a href="javascript:void(0)">N</a></li>
-                <li id="o" class="clickable"><a href="javascript:void(0)">O</a></li>
-                <li id="p" class="clickable"><a href="javascript:void(0)">P</a></li>
-                <li id="q" class="clickable"><a href="javascript:void(0);">Q</a></li>
-                <li id="r"class="clickable"><a  href="javascript:void(0)">R</a></li>
-                <li id="s" class="clickable"><a href="javascript:void(0)">S</a></li>
-                <li id="t" class="clickable"><a href="javascript:void(0)">T</a></li>
-                <li id="u" class="clickable"><a href="javascript:void(0)">U</a></li>
-                <li id="v" class="clickable"><a href="javascript:void(0)">V</a></li>
-                <li id="w" class="clickable"><a href="javascript:void(0)">W</a></li>
-                <li id="x" class="clickable"><a href="javascript:void(0);">X</a></li>
-                <li id="y" class="clickable"><a href="javascript:void(0);">Y</a></li>
-                <li id="z" class="clickable"><a href="javascript:void(0)">Z</a></li>
-            </ul>
-        </div> -->
         <section class="const-carousel">
-            <!-- <div id="poll-carous1" class="owl-carousel"> </div> -->
-            <!-- <div id="filter-carous"  class="hide"></div> -->
         </section>
-        <!-- <header class="dash-header">
-            <h2 class="can-watchh2">Key Candidates</span></h2>
-        </header> -->
         <div class="split-cand-total">
             <section class="turnout-section">
                 <h2 class="can-watchh2">Total Voter Turnout</span></h2>
                 <div class="turnout-items">  
-                    <h3 id="statename"> <span id="turnout_statename">West Bengal</span>  Updated <span id="updatedTime"></span>4:38pm</span> </h3>
+                    <h3 id="statename"> <span id="turnout_statename"></span> <span id="updatedWrap"> Updated <span id="updatedTime">4:38pm</span> </span> </h3>
                     <div class="turnout-content">
                         <div class="battery-chart turnout-2021">
-                            <div class="bar"><div class="barlevel" style="width:67.1%;background-color: rgb(203, 169, 57);"></div></div><div class="level" style="color: rgb(203, 169, 57);">67.1%</div></div>
-                            <div class="split-2"><div>Total electorate <span id="statetotalelectorate">2,43,271</span></div><div><h4>Turnout 2016</h4><div class="battery-chart turnout-2016"><div class="bar"><div class="barlevel" style="width:78.9%;background-color: red;"></div></div><div class="level">78.9%</div></div></div></div></div>
+                            <div class="bar"><div class="barlevel" style="background-color: rgb(203, 169, 57);"></div></div><div class="level" style="color: rgb(203, 169, 57);"></div></div>
+                            <div class="split-2"><div>Total electorate <span id="statetotalelectorate"></span></div><div><h4>Turnout 2016</h4><div class="battery-chart turnout-2016"><div class="bar"><div class="barlevel" style="width:78.9%;background-color: red;"></div></div><div class="level"></div></div></div></div></div>
                 </div>
             </section>
             <section class="const-carousel">
@@ -101,58 +65,33 @@
     <script type="text/javascript">
         pollcarouselWidget('https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec', "#poll-carous1", "","wb")
 
+        jQuery(document).ready(function(){
+            console.log("Height of html: " + jQuery(document).height());
+            var wb_poll = null;
+            var tot_percent = (function () {
+                $.ajax({
+                'async': false,
+                'global': false, 
+                'url': 'https://script.google.com/macros/s/AKfycbzJM3q31Lt3r5mL0U3oZ0pWmobbS-HI3bcFd-pzxrApSTpmXF0ni8-EFlSYQLE6FWgEQA/exec',
+                'dataType' : 'json',
+                'success': function (data) {
+                    wb_poll = data["wb_poll_total"];  
+                    console.log(wb_poll);                    
+                }
+                });
+                return wb_poll;
+            })();
 
-        
-        
-    //     jQuery("ul#letters-listing li.clickable").click(function() {
-    //         $('ul#letters-listing li').removeClass('active');
-    //         $(this).addClass('active');
-    //     })
-
-    //     jQuery("nav button.dashfilters").click(function() {
-    //         $('nav button').removeClass('active');
-    //         $(this).addClass('active');
-    //     })
-
-	// $(".reset-filter").click(function(){
-    //         $('ul#letters-listing li').removeClass('active');
-    //         $('nav button').removeClass('active');
-    //         $('nav button:first-child').addClass('active');
-    //         pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
-    //     })
-    //     var disable_list = {
-    //         wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
-    //         as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]
-    //     }
-
-    //     for(var t=0; t<disable_list["wb"].length; t++){
-    //         // console.log(disable_list["wb"][t].toLowerCase());
-    //         $("#"+disable_list["wb"][t].toLowerCase()).css("pointer-events", "none")
-    //         $("#"+disable_list["wb"][t].toLowerCase()).css("opacity", "0.3")
-    //     }
-    //     jQuery(document).ready(function(){
-    //         console.log("Height of html: " + jQuery(document).height());
-    //         var wb_tot_percent = null;
-    //         var as_tot_percent = null;
-    //         var tot_percent = (function () {
-    //             $.ajax({
-    //             'async': false,
-    //             'global': false, 
-    //             'url': 'https://thefederal.com/api/scraper.php?m=Election2021&t=constData',
-    //             'dataType' : 'json',
-    //             'success': function (data) {
-    //                 wb_tot_percent = data["wb_poll_total"][0]["totalturnout2021"];  
-    //                 as_tot_percent = data["as_poll_total"][0]["totalturnout2021"];     
-    //                 console.log(as_tot_percent);                    
-    //             }
-    //             });
-    //             return wb_tot_percent, as_tot_percent;
-    //         })();
-
-    //         $("#wb-total-percent").text("("+  wb_tot_percent+"%)");
-    //         $("#as-total-percent").text("("+  as_tot_percent+"%)");
+            $("#turnout_statename").text(wb_poll[0]["statename"])
+            $(".turnout-2021 .barlevel").css("width", wb_poll[0]["totalturnout2021"]+"%")
+            $(".turnout-2016 .barlevel").css("width", wb_poll[0]["totalturnout2016"]+"%")
+            $(".turnout-2021 .level").text(wb_poll[0]["totalturnout2021"]+"%")
+            $(".turnout-2016 .level").text(wb_poll[0]["totalturnout2016"]+"%")
+            $("#statetotalelectorate").text(wb_poll[0]["totalelectorate"])
             
-    //     })
+        })
+
+
     </script>
 
 </body>

@@ -50,9 +50,9 @@
     margin: 0 auto;
   }
   .turnout-items {
-    width: 87%;
+    width: 90%;
     /* max-width: 310px; */
-    margin: 0 auto !important;
+    margin: 0 auto;
     height: 140px;
   }
   #poll-carous1 .owl-item {
@@ -74,9 +74,6 @@
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */
-  .const-carousel {
-    margin-top: 20px;
-  }
 }
 @media (min-width: 1000px) {
   .left-map {
@@ -108,26 +105,5 @@
   }
   #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
-  }
-
-  .split-cand-total {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    column-gap: 40px;
-  }
-
-  .split-cand-total .turnout-items .owl-prev {
-    left: 12px !important;
-  }
-
-  .owl-carousel .owl-wrapper-outer::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -4px;
-    width: 70px;
-    height: 154px;
-    z-index: 1;
-    background-image: linear-gradient(to left, transparent, #fff);
   }
 }

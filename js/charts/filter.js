@@ -18,18 +18,6 @@ jQuery(document).ready(function(){
         return turnout_carous;
      })();
 
-    wb_data = all_data["wb_poll_data"]
-    as_data = all_data["as_poll_data"]
-    kl_data = all_data["kl_poll_data"]
-    pd_data = all_data["pd_poll_data"]
-    tn_data = all_data["tn_poll_data"]
-
-    //  console.log("all", all_data)
-    //  console.log("wb", wb_data)
-    //  console.log("as", as_data)
-    //  console.log("kl", kl_data)
-    //  console.log("tn", tn_data)
-    //  console.log("pd", pd_data)
     
     var l = turnout_carous.length, find_let, get_state = "wb";
     var alphabetswise = {};
@@ -37,9 +25,13 @@ jQuery(document).ready(function(){
         $('ul#letters-listing li').removeClass('active');
         $('ul#letters-listing li').css("pointer-events", "auto")
         $('ul#letters-listing li').css("opacity", "1")
+        
+        find_let = $(this).attr('data');
+        console.log("find_let", find_let)
+        console.log("all_data", all_data[find_let+"_poll_total"][0])
 
-	   find_let = $(this).attr('data');
-    //    console.log("find_let", find_let)
+        $("#turnout_statename").text(all_data[find_let+"_poll_total"][0]["state"])
+    //    console.log("find_let", get_state)
        var disable_list = {
             wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
             as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]

@@ -9,24 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
     <!-- <link rel="stylesheet" href="https://thefederal.com/embed/assembly-election-2021/style.css?v=7771"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://thefederal.com/embed/assembly-election-2021/responsive.css?v=5322">
+    <!-- <link rel="stylesheet" href="https://thefederal.com/embed/assembly-election-2021/responsive.css?v=5322"> -->
+    <link rel="stylesheet" href="responsive.css">
     
 </head>
 <body>
     <div class="tf_wrap pollDash-wrap">
         <header class="dash-header">
-            <h2 class="poll-mainhead">Assembly Elections 2021 <span> Total Voter Turnout</span></h2>
+            <h2 class="poll-mainhead">Assembly Elections 2021</h2>
             <nav>
-                <button class="dashfilters active" data="wb">West Bengal  <span id="wb-total-percent"></span></button>
-                <button class="dashfilters" data="as">Assam <span id="as-total-percent"></span></button>
+                <button class="dashfilters active" data="wb">West Bengal </button>
+                <button class="dashfilters" data="as">Assam </button>
                 <button class="dashfilters disabled" data="tn">Tamil Nadu</button>
                 <button class="dashfilters disabled" data="kl">Kerala</button>
                 <button class="dashfilters disabled" data="pu">Puducherry</button>
             </nav>
         </header>
-        <div id="alphabetfilters">
+        <!-- <div id="alphabetfilters">
             <ul id="letters-listing">
-		<li class="reset-filter"><a href="javascript:void(0)"><img src="img/reset-icon.svg" /></a></li>
+		        <li class="reset-filter"><a href="javascript:void(0)"><img src="img/reset-icon.svg" /></a></li>
                 <li id="a" class="clickable"><a href="javascript:void(0)">A</a></li>
                 <li id="b" class="clickable"><a href="javascript:void(0)">B</a></li>
                 <li id="c" class="clickable"><a href="javascript:void(0)">C</a></li>
@@ -54,17 +55,29 @@
                 <li id="y" class="clickable"><a href="javascript:void(0);">Y</a></li>
                 <li id="z" class="clickable"><a href="javascript:void(0)">Z</a></li>
             </ul>
-        </div>
+        </div> -->
         <section class="const-carousel">
-            <div id="poll-carous1" class="owl-carousel"> </div>
+            <!-- <div id="poll-carous1" class="owl-carousel"> </div> -->
             <!-- <div id="filter-carous"  class="hide"></div> -->
         </section>
-        <header class="dash-header">
+        <!-- <header class="dash-header">
             <h2 class="can-watchh2">Key Candidates</span></h2>
-        </header>
-        <section class="const-carousel">
-            <div id="poll-carous2" class="owl-carousel"> </div>
-        </section>
+        </header> -->
+        <div class="split-cand-total">
+            <section class="turnout-section">
+                <h2 class="can-watchh2">Total Voter Turnout</span></h2>
+                <div class="turnout-items">  
+                    <h3 id="statename"> <span id="turnout_statename">West Bengal</span>  Updated <span id="updatedTime"></span>4:38pm</span> </h3>
+                    <div class="turnout-content">
+                        <div class="battery-chart turnout-2021">
+                            <div class="bar"><div class="barlevel" style="width:67.1%;background-color: rgb(203, 169, 57);"></div></div><div class="level" style="color: rgb(203, 169, 57);">67.1%</div></div><div class="split-2"><div>Total electorate <span>2,43,271</span></div><div><h4>Turnout 2016</h4><div class="battery-chart turnout-2016"><div class="bar"><div class="barlevel" style="width:78.9%;background-color: red;"></div></div><div class="level">78.9%</div></div></div></div></div>
+                </div>
+            </section>
+            <section class="const-carousel">
+                <h2 class="can-watchh2">Key Candidates</span></h2>
+                <div id="poll-carous2" class="owl-carousel"> </div>
+            </section>
+        </div>
     </div>
 	<script type="text/javascript">
 	var statename_fixed = 'wb';
@@ -78,63 +91,66 @@
     <script src="https://thefederal.com/embed/assembly-election-2021/js/map.js"></script>
     <script src="https://thefederal.com/embed/assembly-election-2021/js/owl.carousel.js"></script>
     <script src="https://thefederal.com/embed/assembly-election-2021/js/d3-parliament.js"></script>
-    <script src="https://thefederal.com/embed/assembly-election-2021/js/charts/poll-carousel.js?v=513"></script>
+    <!-- <script src="https://thefederal.com/embed/assembly-election-2021/js/charts/poll-carousel.js?v=513"></script> -->
+    <script src="js/charts/poll-carousel.js"></script>
     <!-- <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script> -->
-    <script src="https://thefederal.com/embed/assembly-election-2021/js/charts/filter.js?v=1823"></script>
+    <script src="js/charts/filter.js"></script>
+    <!-- <script src="https://thefederal.com/embed/assembly-election-2021/js/charts/filter.js?v=1823"></script> -->
     <script type="text/javascript">
         pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
+
+
         
         
-        
-        jQuery("ul#letters-listing li.clickable").click(function() {
-            $('ul#letters-listing li').removeClass('active');
-            $(this).addClass('active');
-        })
+    //     jQuery("ul#letters-listing li.clickable").click(function() {
+    //         $('ul#letters-listing li').removeClass('active');
+    //         $(this).addClass('active');
+    //     })
 
-        jQuery("nav button.dashfilters").click(function() {
-            $('nav button').removeClass('active');
-            $(this).addClass('active');
-        })
+    //     jQuery("nav button.dashfilters").click(function() {
+    //         $('nav button').removeClass('active');
+    //         $(this).addClass('active');
+    //     })
 
-	$(".reset-filter").click(function(){
-            $('ul#letters-listing li').removeClass('active');
-            $('nav button').removeClass('active');
-            $('nav button:first-child').addClass('active');
-            pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
-        })
-        var disable_list = {
-            wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
-            as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]
-        }
+	// $(".reset-filter").click(function(){
+    //         $('ul#letters-listing li').removeClass('active');
+    //         $('nav button').removeClass('active');
+    //         $('nav button:first-child').addClass('active');
+    //         pollcarouselWidget('https://thefederal.com/api/scraper.php?m=Election2021&t=constData', "#poll-carous1", "","wb")
+    //     })
+    //     var disable_list = {
+    //         wb: ["A", "F", "H", "I", "L", "O", "Q", "T", "U", "V", "W", "X", "Y", "Z"],
+    //         as: ["E", "F", "H", "I", "O", "P", "Q", "U", "V", "W", "X", "Y", "Z"]
+    //     }
 
-        for(var t=0; t<disable_list["wb"].length; t++){
-            // console.log(disable_list["wb"][t].toLowerCase());
-            $("#"+disable_list["wb"][t].toLowerCase()).css("pointer-events", "none")
-            $("#"+disable_list["wb"][t].toLowerCase()).css("opacity", "0.3")
-        }
-        jQuery(document).ready(function(){
-            console.log("Height of html: " + jQuery(document).height());
-            var wb_tot_percent = null;
-            var as_tot_percent = null;
-            var tot_percent = (function () {
-                $.ajax({
-                'async': false,
-                'global': false, 
-                'url': 'https://thefederal.com/api/scraper.php?m=Election2021&t=constData',
-                'dataType' : 'json',
-                'success': function (data) {
-                    wb_tot_percent = data["wb_poll_total"][0]["totalturnout2021"];  
-                    as_tot_percent = data["as_poll_total"][0]["totalturnout2021"];     
-                    console.log(as_tot_percent);                    
-                }
-                });
-                return wb_tot_percent, as_tot_percent;
-            })();
+    //     for(var t=0; t<disable_list["wb"].length; t++){
+    //         // console.log(disable_list["wb"][t].toLowerCase());
+    //         $("#"+disable_list["wb"][t].toLowerCase()).css("pointer-events", "none")
+    //         $("#"+disable_list["wb"][t].toLowerCase()).css("opacity", "0.3")
+    //     }
+    //     jQuery(document).ready(function(){
+    //         console.log("Height of html: " + jQuery(document).height());
+    //         var wb_tot_percent = null;
+    //         var as_tot_percent = null;
+    //         var tot_percent = (function () {
+    //             $.ajax({
+    //             'async': false,
+    //             'global': false, 
+    //             'url': 'https://thefederal.com/api/scraper.php?m=Election2021&t=constData',
+    //             'dataType' : 'json',
+    //             'success': function (data) {
+    //                 wb_tot_percent = data["wb_poll_total"][0]["totalturnout2021"];  
+    //                 as_tot_percent = data["as_poll_total"][0]["totalturnout2021"];     
+    //                 console.log(as_tot_percent);                    
+    //             }
+    //             });
+    //             return wb_tot_percent, as_tot_percent;
+    //         })();
 
-            $("#wb-total-percent").text("("+  wb_tot_percent+"%)");
-            $("#as-total-percent").text("("+  as_tot_percent+"%)");
+    //         $("#wb-total-percent").text("("+  wb_tot_percent+"%)");
+    //         $("#as-total-percent").text("("+  as_tot_percent+"%)");
             
-        })
+    //     })
     </script>
 
 </body>

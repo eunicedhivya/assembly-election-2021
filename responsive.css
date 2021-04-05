@@ -106,4 +106,25 @@
   #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   }
+
+  .split-cand-total {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 40px;
+  }
+
+  .split-cand-total .turnout-items .owl-prev {
+    left: 12px !important;
+  }
+
+  .owl-carousel .owl-wrapper-outer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 70px;
+    height: 154px;
+    z-index: 1;
+    background-image: linear-gradient(to left, transparent, #fff);
+  }
 }

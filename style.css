@@ -3,31 +3,47 @@
   max-width: 400px;
 }
 
+.barlevel {
+  transition: all 0.5s;
+}
+
 /* svg {
   background-color: red;
 } */
 
 .tf_wrap {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   max-height: 1000px;
   /* background-image: url(img/trace.jpeg);
   background-repeat: no-repeat;
-  background-position: top center; */
-  margin: 0 auto;
+  background-position: top center; 
+  margin: 0 auto;*/
+  margin: 0;
   font-family: "Rubik", sans-serif;
 }
 .tf_wrap .dash-header {
-  padding: 10px 5px;
+  /*padding: 10px 5px;*/
+  padding: 0;
   display: flex;
   align-items: center;
   /* display: none; */
 }
-.tf_wrap .dash-header h2 {
+.tf_wrap .dash-header h2,
+.tf_wrap .split-cand-total h2 {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0px;
   margin-right: 17px;
+}
+
+.tf_wrap .dash-header h2 {
+  margin: 15px 17px 15px 0;
+}
+
+.tf_wrap .split-cand-total h2 {
+  margin-top: 0;
+  color: #777777;
 }
 
 .tf_wrap .dash-header h2.poll-mainhead {
@@ -38,7 +54,8 @@
   margin-bottom: 0;
 }
 
-.tf_wrap button.dashfilters, .tf_wrap button.searchBtn {
+.tf_wrap button.dashfilters,
+.tf_wrap button.searchBtn {
   background-color: #cccc;
   color: #999;
   border: none;
@@ -48,7 +65,7 @@
   padding: 3px 7px;
   line-height: 15px;
   text-transform: uppercase;
-} 
+}
 .tf_wrap .searchField {
   background-color: #ccc;
   color: #999;
@@ -638,7 +655,7 @@ ul#letters-listing li.disabled a {
 .poll-candidate-items {
   width: 90%;
   /* max-width: 375px; */
-  height: 135px;
+  height: 145px;
   background-color: #f8f8f8;
   border-radius: 14px;
   box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
@@ -649,7 +666,7 @@ ul#letters-listing li.disabled a {
   position: relative;
 }
 .poll-candidate-items img {
-  max-width: 95px;
+  max-width: 90px;
   position: absolute;
   bottom: 0;
   left: 12px;
@@ -772,8 +789,9 @@ ul#letters-listing li.disabled a {
   width: 100%;
   /* max-width: 300px; */
   /* height: 165px; */
-  height: 135px;
-  background-color: #f8f8f8;
+  height: 150px;
+  background-color: #333;
+  color: #777777;
   border-radius: 14px;
   box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
   -webkit-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
@@ -785,7 +803,8 @@ ul#letters-listing li.disabled a {
   font-family: "Rubik", sans-serif;
   font-size: 14px;
   border-radius: 14px 14px 0 0;
-  background-color: #e8e8e8;
+  background-color: #000;
+  color: #fff;
   height: 25px;
   line-height: 25px;
   padding: 0 0 0 15px;
@@ -793,11 +812,17 @@ ul#letters-listing li.disabled a {
   margin: 0;
   font-weight: 600;
 }
+.turnout-items h3 #updatedWrap {
+  float: right;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 400;
+}
 /* .turnout-items h3 span{
   font-weight: 600;
 } */
 .turnout-items .turnout-content {
-  padding: 15px;
+  padding: 20px 15px;
   box-sizing: border-box;
 }
 .turnout-items .battery-chart {
@@ -831,7 +856,7 @@ ul#letters-listing li.disabled a {
 .turnout-items .turnout-2016 .level {
   font-size: 14px;
   line-height: 15px;
-  color: #ff0000;
+  color: #F59A13;
   font-weight: 500;
 }
 .turnout-items .split-2 {
@@ -846,7 +871,7 @@ ul#letters-listing li.disabled a {
 }
 .turnout-items .split-2 div span {
   font-weight: 500;
-  color: #777777;
+  color: #fff;
   font-size: 18px;
   line-height: 25px;
 }
@@ -859,7 +884,7 @@ ul#letters-listing li.disabled a {
 .turnout-items .split-2 div h4 {
   font-weight: 500;
   margin: 0 0 5px 0;
-  color: #ff0000;
+  color: #F59A13;
   font-size: 14px;
   line-height: 16px;
 }
@@ -877,4 +902,30 @@ ul#letters-listing li.disabled a {
 
 #poll-carous2.owl-carousel .owl-wrapper-outer::after {
   height: 210px;
+}
+
+.statewise-data-block {
+  height: 135px;
+  background-color: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0px 1px 5px 2px rgb(120 120 120 / 41%);
+  -webkit-box-shadow: 0px 1px 5px 2px rgb(120 120 120 / 41%);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(120, 120, 120, 0.41);
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+  margin: 10px 15px 0 5px;
+  padding: 10px;
+}
+
+.split-cand-total .turnout-items {
+  margin: 22px 15px 0 5px;
+}
+.split-cand-total .turnout-items .split-2 div {
+  font-size: 14px;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  z-index: 2;
 }

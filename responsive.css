@@ -10,6 +10,7 @@
   .tf_wrap .dash-header h2.poll-mainhead {
     margin-right: 10px;
     font-size: 19px;
+    text-align: center;
   }
   .tf_wrap button.dashfilters {
     font-size: 11px;
@@ -44,16 +45,23 @@
   }
   .owl-carousel .owl-wrapper-outer {
     padding-left: 0;
+    padding-top: 0;
   }
   .poll-candidate-items {
     /* max-width: 310px; */
     margin: 0 auto;
   }
   .turnout-items {
-    width: 90%;
+    width: 87%;
     /* max-width: 310px; */
-    margin: 0 auto;
-    height: 140px;
+    margin: 0 auto !important;
+    height: 150px;
+  }
+  .turnout-items .battery-chart {
+    grid-template-columns: 79% 21%;
+  }
+  .turnout-items .turnout-2016 {
+    grid-template-columns: 62% 38%;
   }
   #poll-carous1 .owl-item {
     margin: 0 auto;
@@ -65,6 +73,10 @@
     top: -4px;
     width: 30px;
   }
+  .poll-candidate-items img {	
+    left: 0;	
+    overflow: hidden;	
+  }
   .poll-candidate-items .cand-meta li span {
     font-size: 12px;
   }
@@ -74,6 +86,12 @@
   /* #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
   } */
+  .const-carousel {
+    margin-top: 20px;
+  }
+  .tf_wrap .split-cand-total h2, .tf_wrap nav {
+    text-align: center;
+  }
 }
 @media (min-width: 1000px) {
   .left-map {
@@ -105,5 +123,26 @@
   }
   #poll-carous2.owl-carousel .owl-item {
     width: 360px !important;
+  }
+
+  .split-cand-total {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 40px;
+  }
+
+  .split-cand-total .turnout-items .owl-prev {
+    left: 12px !important;
+  }
+
+  .owl-carousel .owl-wrapper-outer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 70px;
+    height: 154px;
+    z-index: 1;
+    background-image: linear-gradient(to left, transparent, #fff);
   }
 }

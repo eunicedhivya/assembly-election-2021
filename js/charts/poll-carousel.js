@@ -5,83 +5,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
 	filter = typeof filter !== 'undefined' ? filter : '';
 	var filter_const = filter;
 	var state_data = statename;
-    $("#poll-carous1").owlCarousel({
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [980,3],
-        itemsTablet: [768,2],
-        itemsTabletSmall: false,
-        itemsMobile : [479,1],
-        pagination: true,
-        navigation : true,
-        navigationText : ['<i class="arrow left"></i>','<i class="arrow right"></i>'],
-        jsonPath : datasource,
-        jsonSuccess : customDataSuccess
-    });
-    
-    function customDataSuccess(data){
-        var myColor =  d3.scaleLinear()
-            .domain([1, 100])
-            .interpolate(d3.interpolateHcl)
-            .range([d3.hcl('#e8484e'), d3.hcl('#adce67')])
-            // .range([d3.hcl('#b1afb0'), d3.hcl('#32cd3f')])
-
-        var content = "";
-		var matchingletter;
-		var statn = statename+"_poll_data"; 
-        // console.log("Statename:"+statename);
-        for(var i in data[statn]){
-			var constname = data[statn][i]["constname"];
-            var turnout2021 = data[statn][i]["turnout2021"];
-            var turnout2016 = data[statn][i]["turnout2016"];
-            var totalElectorate = data[statn][i]["totalElectorate"];
-            var updateTime = data[statn][i]["timeupdated"];
-            //  console.log(filter_const);
-            
-            //if((filter_const != "wb_poll_data") ) { 
-                if(filter_const != ''){
-                    // console.log('here');
-				var matchingletter = constname.charAt(0).toUpperCase();
-				if(matchingletter != filter_const) {
-					continue;
-				}
-                }
-			//}
-            
-
-            html = '<div class="turnout-items">'
-            html += '<h3> '+constname+'  <span class="turnout-update">Updated '+updateTime+'</span> </h3>'
-            html += '<div class="turnout-content">'
-            html += '<div class="battery-chart turnout-2021">'
-            html += '<div class="bar">'
-            html +=  '<div class="barlevel" style="width:'+turnout2021+'%;background-color: '+myColor(turnout2021)+';"></div>'
-            html +=  '</div>'
-            html +=  '<div class="level" style="color: '+myColor(turnout2021)+';">'+turnout2021+'%</div>'
-            html +=  '</div>'        
-            html +=  '<div class="split-2">'
-            html +=  '<div>'
-            html +=  'Total electorate' 
-            html +=  ' <span>'+totalElectorate.toLocaleString('en-IN')+'</span>'
-            html +=  '</div>'
-            html +=  '<div>'
-            html +=  '<h4>Turnout 2016</h4>'
-            html +=  '<div class="battery-chart turnout-2016">'
-            html +=  '<div class="bar">'
-            html +=  '<div class="barlevel" style="width:'+turnout2016+'%;background-color: red;"></div>'
-            html +=  '</div>'
-            html +=  '<div class="level">'+turnout2016+'%</div>'
-            html +=  '</div>'
-            html +=  '</div>'
-            html +=  '</div>'
-            html +=  '</div>'
-            html +=  '</div>'
-
-            content += html
-			//break;
-        }
-        $("#poll-carous1").html(content);
-    }
-
-
+   
     $("#poll-carous2").owlCarousel({
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],
@@ -98,7 +22,7 @@ function pollcarouselWidget(datasource, selector, filter = '', statename){
     function customDataSuccess1(data) {
             var cand = "";
             var statn = statename+"-keycandidate"; 
-            // console.log("Statename:"+statename);
+            console.log("Statename:"+statename);
                 for(var j in data[statn]){
                     
                     var phase = data[statn][j].phase;
